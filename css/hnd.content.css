@@ -59,13 +59,14 @@ a.rvts10, span.rvts10
 }
 span.rvts11
 {
- font-family: 'Segoe UI';
+ font-size: 12pt;
+ font-family: 'Roboto';
+ font-weight: bold;
 }
 span.rvts12
 {
- font-size: 11pt;
- font-family: 'Segoe UI';
- font-weight: bold;
+ font-size: 12pt;
+ font-family: 'Roboto';
 }
 span.rvts13 /* Font Style */
 {
@@ -83,11 +84,22 @@ a.rvts14, span.rvts14 /* Font Style */
 span.rvts15
 {
  font-family: 'Segoe UI';
+}
+span.rvts16
+{
+ font-size: 11pt;
+ font-family: 'Roboto';
+}
+span.rvts17
+{
+ font-size: 11pt;
+ font-family: 'Roboto';
  font-weight: bold;
 }
-a.rvts16, span.rvts16
+a.rvts18, span.rvts18
 {
- font-family: 'Segoe UI';
+ font-size: 12pt;
+ font-family: 'Roboto';
  color: #0000ff;
  text-decoration: underline;
 }
