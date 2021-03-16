@@ -78,18 +78,18 @@ span.rvts13
 span.rvts14
 {
  font-size: 12pt;
- font-family: 'Roboto';
- font-weight: bold;
 }
-span.rvts15
-{
- font-size: 12pt;
-}
-a.rvts16, span.rvts16
+a.rvts15, span.rvts15
 {
  font-size: 12pt;
  color: #0000ff;
  text-decoration: underline;
+}
+span.rvts16
+{
+ font-size: 12pt;
+ font-family: 'Roboto';
+ font-weight: bold;
 }
 a.rvts17, span.rvts17
 {
