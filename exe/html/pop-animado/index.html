@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop animado</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h2>Título descritivo</h2>
+            <p>
+                Lorem ipsum accumsan aenean feugiat aenean in praesent hendrerit nunc a, conubia arcu porttitor
+                facilisis hendrerit aenean commodo convallis consequat, elit condimentum sollicitudin platea fringilla
+                platea nulla mollis donec.
+            </p>
+        </div>
+        <div class="toggleBtn">
+        </div>
+    </div>
+    <script>
+        let toggleBtn = document.querySelector('.toggleBtn');
+        let container = document.querySelector('.container');
+        toggleBtn.onclick = function () {
+            container.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
