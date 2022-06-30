@@ -1,0 +1,23 @@
+<!-- formulário -->
+<form>
+    <input name="campoCriaPost" placeholder="Digite o seu post" />
+    <button type="submit">Adicionar na lista</button>
+</form>
+<!-- lista -->
+<ul class="listaDePosts">
+</ul>
+
+<!-- script de funções -->
+<script>
+    const $meuForm = document.querySelector('form');
+    console.log($meuForm);
+
+    $meuForm.addEventListener('submit', function criaPostConytroller(infosDoEvento) {
+        infosDoEvento.preventDefault();        
+        const $campoCriaPost = document.querySelector('input[name="campoCriaPost"]');
+        const $listaDePosts = document.querySelector('.listaDePosts');        
+        
+        $listaDePosts.insertAdjacentHTML('afterbegin', `<li>${$campoCriaPost.value}</li>`)
+        $campoCriaPost.value = '';
+    });
+</script>
