@@ -103,9 +103,7 @@ ul {
     color: #ffffff;
     font-weight: 400;
     font-size: 1em;
-    position: sticky;
-    top: 80%;
-    left: 40%;
+    
 }
 
 .btn-delete:hover {
