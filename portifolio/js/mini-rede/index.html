@@ -1,0 +1,95 @@
+<form>
+    <input name="campoCriaPost" placeholder="Digite o seu post" />
+    <button type="submit">Postar</button>
+</form>
+<ul class="listaDePosts">
+</ul>
+
+<script>
+    const miniRedeSocial = {
+        usuarios: [
+            {
+                username: 'jonas',
+            }
+        ],
+        posts: [
+            {
+                id: Date.now(),
+                owner: 'jonas',
+                content: "Meu primeiro Post"
+            }
+        ],
+        readPosts() {
+            miniRedeSocial.posts.forEach(({ id, owner, content }) => {
+                miniRedeSocial.criaPost({ id, owner: owner, content: content }, true);
+            })
+        },
+
+        criaPost(dados, htmlOnly = false) {
+            const idInternoAqui = Date.now();
+            if (!htmlOnly) {
+
+                miniRedeSocial.posts.push({
+                    id: dados.id || idInternoAqui,
+                    owner: dados.owner,
+                    content: dados.content
+                });
+            }
+
+            const $listaDePosts = document.querySelector('.listaDePosts');
+            $listaDePosts.insertAdjacentHTML('afterbegin', `
+            <li data-id="${idInternoAqui}">
+                <button class="btn-delete">Delete</button>
+                <span contenteditable>                
+                    ${dados.content}
+                    <span>
+                </li>
+            `);
+        },
+        apagaPost(id) {
+            const listaDePostsAtualizada = miniRedeSocial.posts.filter((postAtual) => {
+                return postAtual.id !== Number(id);
+            })
+            miniRedeSocial.posts = listaDePostsAtualizada;
+        },
+        atualizaContentDoPost(id, novoConteudo) {
+            const postQueVaiSerAtualizado = miniRedeSocial.posts.find((post) => {
+                return post.id === Number(id);
+            });
+            postQueVaiSerAtualizado.content = novoConteudo
+        }
+    };
+
+    const $meuForm = document.querySelector('form');
+
+    miniRedeSocial.readPosts();
+
+    $meuForm.addEventListener('submit', function criaPostController(infosDoEvento) {
+        infosDoEvento.preventDefault();
+
+        const $campoCriaPost = document.querySelector('input[name="campoCriaPost"]');
+
+        miniRedeSocial.criaPost({ owner: 'jonas', content: $campoCriaPost.value });
+
+        $campoCriaPost.value = '';
+    })
+
+    document.querySelector('.listaDePosts').addEventListener('click', function (infosDoEvento) {
+        const elementoAtual = infosDoEvento.target;
+        const isBtnDeleteClick = infosDoEvento.target.classList.contains('btn-delete')
+        if (isBtnDeleteClick) {
+            const id = elementoAtual.parentNode.getAttribute('data-id');
+
+            miniRedeSocial.apagaPost(id);
+
+            elementoAtual.parentNode.remove();
+        }
+    })
+
+    document.querySelector('.listaDePosts').addEventListener('input', function (infosDoEvento) {
+        const elementoAtual = infosDoEvento.target;
+        const id = elementoAtual.parentNode.getAttribute('data-id');
+
+        miniRedeSocial.atualizaContentDoPost(id, elementoAtual.innerText)
+    });
+</script>
