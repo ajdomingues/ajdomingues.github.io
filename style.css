@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:400,700');
+/* @import url('https://fonts.googleapis.com/css2?family=Oswald:400,700'); */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 body {
@@ -32,7 +32,7 @@ ul li {
 }
 
 ul li:hover {
-    background: #33a3ee;
+    background: #0f927c;
     transform: translateX(-50px);
 }
 
@@ -50,7 +50,7 @@ ul li::before {
 }
 
 ul li:hover::before {
-    background: #1f5378;
+    background: #0f927c;
 }
 
 ul li::after {
@@ -67,7 +67,7 @@ ul li::after {
 }
 
 ul li:hover::after {
-    background: #2982b9;
+    background: #0f927c;
 }
 
 ul li a {
