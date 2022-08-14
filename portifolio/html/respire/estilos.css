@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: #fff;
+}
+
+
+.frase {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    text-align: left;
+    width: 100%;
+    font-size: 3vw;
+    line-height: 1em;
+    font-weight: 800;
+    color: #333;
+    text-transform: uppercase;
+}
+
+h2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    font-size: 12vw;
+    line-height: 1em;
+    font-weight: 800;
+    color: #333;
+    text-transform: uppercase;
+}
+
+i {
+    position: relative;
+    display: block;
+    background: #000;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(calc(100vh+350));
+    }
+
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+i:nth-child(5n+1) {
+    background: #fff;
+}
+
+i:nth-child(5n+2) {
+    background: #78a6e2;
+}
+
+i:nth-child(5n+3) {
+    background: #fff;
+    border: 5px solid #9debe4;
+}
+
+i:nth-child(5n+4) {
+    background: #2bd11b;
+}
+
+i:nth-child(5n+5) {
+    background: #fff;
+    border: 5px solid #2bc11b;
+}
+
+i:nth-child(5n+6) {
+    background: #fff;
+    border: 5px solid #4ad8e2;
+}
+
+i:nth-child(5n+7) {
+    background: #fff;
+    border: 5px solid #2bc11b;
+}
+
+i:nth-child(5n+8) {
+    background: #fff;
+    border: 5px solid #187ab3;
+}
