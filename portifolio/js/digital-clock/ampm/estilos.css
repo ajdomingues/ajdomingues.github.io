@@ -15,6 +15,20 @@ body {
     background: #1d2b3a;
 }
 
+body a {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    background: #1d2b3a;
+    font-weight: 300;
+    text-decoration: none;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 #clock h2 {
     position: relative;
     display: block;
@@ -64,10 +78,21 @@ body {
     text-transform: uppercase;
 }
 
-#clock #time div:last-child span {
+#clock #time div:nth-last-child(2) span {
     background: #ff006a;
 }
 
-#clock #time div:last-child span:nth-child(2) {
+#clock #time div:nth-last-child(2) span:nth-child(2) {
     background: #ec0062;
+}
+
+#clock #time div:nth-last-child(1) span {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 40px;
+    font-size: 1.5em;
+    background: #fff;
+    color: #000;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
 }
