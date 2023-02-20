@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const squares = document.querySelectorAll('.grid div')
-    const scoreDisplay = document.querySelector('span')
+    const scoreDisplay = document.querySelector('span')    
     const startBtn = document.querySelector('.start')
 
     const width = 10
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentIndex = 0
         currentSnake.forEach(index => squares[index].classList.add('snake'))
         interval = setInterval(moveOutcomes, intervalTime)
+        
     }
 
 
