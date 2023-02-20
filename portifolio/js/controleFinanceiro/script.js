@@ -6,6 +6,13 @@ const form = document.querySelector('#form')
 const inputTransactionName = document.querySelector('#text')
 const inputTransactionAmount = document.querySelector('#amount')
 
+const modal = document.querySelector("dialog")
+const buttonClose = document.querySelector("dialog button")
+
+buttonClose.onclick = function () {
+    modal.close()
+}
+
 const localStorageTransactions = JSON.parse(localStorage
     .getItem('transactions'))
 let transactions = localStorage
@@ -91,11 +98,10 @@ const handleFormSubmit = event => {
     const transactionAmount = inputTransactionAmount.value.trim()
     const isSomeInputEmpty = transactionName === '' || transactionAmount === ''
 
-    if (isSomeInputEmpty) {
-        // TODO:substituir o alert por um modal
-        alert('Por favor, preencha o nome e o valor da transação!')
-        return
-    }
+    if (isSomeInputEmpty) {        
+        modal.showModal()
+        return       
+    }    
 
     addToTransactionsArray(transactionName, transactionAmount)
     init()

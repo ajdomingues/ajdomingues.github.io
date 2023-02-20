@@ -50,12 +50,12 @@ h4 {
   margin: 20px 0;
 }
 
-.inc-exp-container > div {
+.inc-exp-container>div {
   flex: 1;
   text-align: center;
 }
 
-.inc-exp-container > div:first-of-type {
+.inc-exp-container>div:first-of-type {
   border-right: 1px solid #dedede;
 }
 
@@ -149,4 +149,15 @@ input[type='number'] {
 
 .transactions li:hover .delete-btn {
   opacity: 1;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0/.5);
+}
+
+dialog {
+  border: none;
+  border-radius: .5rem;
+  box-shadow: 0 0 1em rgb(0 0 0/.3);
+  width: 80%;
 }
