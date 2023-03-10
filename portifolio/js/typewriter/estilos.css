@@ -1,9 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu+Condensed&display=swap');
+
 body {
     background-color: darkslategrey;
-    color: white;
     text-align: center;
-}
-
-#text {
-    
+    color: rgb(240, 240, 240);
+    font-size: 35px;
 }
