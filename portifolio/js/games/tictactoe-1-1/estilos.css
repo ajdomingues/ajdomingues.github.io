@@ -59,11 +59,3 @@ body {
         cursor: pointer
     }
 }
-
-.X {
-    background-image: url('cross.png')
-  }
-  
-  .O {
-    background-image: url('circle.png')
-  }
