@@ -5,35 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Cálculo de IMC</title>
 </head>
 
 <body>
-    <div>
-        <h1 id="titulo">IMC</h1>
-        <br>
+    <main>
+        <div class="container">
+            <div class="title">Cálculo - IMC</div>
+
+            <div class="input">
+                <label>Nome:</label>
+                <input type="text" id="name">
+            </div>
+
+            <div class="input">
+                <label>Altura:</label>
+                <input type="number" id="height">
+            </div>
+
+            <div class="input">
+                <label>Peso:</label>
+                <input type="number" id="weight">
+            </div>
+
+            <button id="calculate">Calcular</button>
+            <div class="result" id="result"></div>
+    </main>
+    <!-- TODO: adicionar um disclaimer no rodapé -->
     </div>
-    
-    <form>
-        <fieldset class="grupo">
-            <div class="campo">
-                <label for="peso"><strong>Peso:</strong></label>
-                <input type="number" name="peso" id="peso" required>
-            </div>
-            <div class="campo">
-                <label for="altura"><strong>Altura em cm:</strong></label>
-                <input type="number"  name="altura" id="altura" required>
-                <button class="btnCalcular" type="submit" onsubmit="">Calcular</button>
-            </div>
-        </fieldset>
-        <br>
-        <div class="campo">
-            <br>
-            <label for="resultados"><strong>Resultados: </strong></label>
-            <textarea rows="6" style="width: 26em" id="resultados" name="resultados"></textarea>
-        </div>
-    </form>
 
     <script src="app.js"></script>
 </body>
