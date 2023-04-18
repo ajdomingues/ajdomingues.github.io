@@ -16,8 +16,21 @@ main {
 }
 
 button {
-    /* width: 80px; */
+     /* width: 80px;  */
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1rem;
-    outline-style: auto;
+    /* outline-style: auto; */
+    cursor: pointer;
+}
+
+#red{
+    background-color: red;
+}
+
+#yellow{
+    background-color: yellow;
+}
+
+#green{
+    background-color: green;    
 }
