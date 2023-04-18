@@ -14,9 +14,17 @@ const changeColor = () => {
     const colors = ['green', 'yellow', 'red']
     const color = colors[colorIndex]
     turnOn[color]()
-    // colorIndex++
     nextIndex();
 }
+
+const broken = () => {
+    const colors = ['yellow', 'off', 'yellow']
+    const color = colors[colorIndex]
+    turnOn[color]()
+    nextIndex();
+}
+
+const fixit = () => document.location.reload(true)
 
 const stopAutomatic = () => {
     clearInterval(intervalId)
@@ -26,7 +34,10 @@ const turnOn = {
     'red': () => img.src = './img/vermelho.png',
     'yellow': () => img.src = './img/amarelo.png',
     'green': () => img.src = './img/verde.png',
-    'automatic': () => intervalId = setInterval(changeColor, 1000)
+    'off': () => img.src = './img/desligado.png',
+    'automatic': () => intervalId = setInterval(changeColor, 1000),
+    'broken': () => intervalId = setInterval(broken, 1000),
+    'fixit': () => fixit()
 }
 
 buttons.addEventListener('click', trafficLight)

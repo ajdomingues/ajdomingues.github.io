@@ -30,7 +30,7 @@ function consertar() {
 
 function lampOnOff() {
     if (turnOnOff.textContent == 'Consertar') {
-        consertar()
+        fixit()
     }
     if (turnOnOff.textContent == 'Ligar') {
         lampOn()
