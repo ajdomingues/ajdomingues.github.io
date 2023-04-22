@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="./img/todo.svg">
+    <link rel="icon" type="image/x-icon" href="./img/todo.svg">    
     <title>Todo-list</title>
 </head>
+
 <body>
-    
-    <p class="info">Esta aplicação armazena dados apenas no seu navegador</p>
+    <div class="todo">
+
+        <div class="todo__title">
+            TODO - LIST
+        </div>
+
+        <div class="todo__list" id="todoList">
+
+        </div>
+
+        <div class="todo__new-item" id="newItem">
+            <div>&and;</div>
+            <input type="text" placeholder="Digite e pressione enter para adicionar a tarefa">
+            <div>&and;</div>
+        </div>
+
+    </div>
+
+    <p class="info">Esta aplicação armazena dados apenas no seu navegador.</p>
+    <script src="app.js"></script>
 </body>
+
 </html>
