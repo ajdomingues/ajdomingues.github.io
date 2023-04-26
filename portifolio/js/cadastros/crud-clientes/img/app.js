@@ -8,10 +8,25 @@ const closeModal = () => document.getElementById('modal')
 
 //CRUD
 
-    //Eventos
+// Interação com layout
+
+const saveClient = () => {
+//verifica campos
+if(isValidFields()){
+    console.log("cadastrando cliente")
+}
+
+
+}
+
+//Eventos
+
 
 document.getElementById('cadastrarCliente')
     .addEventListener('click', openModal)
 
 document.getElementById('modalClose')
     .addEventListener('click', closeModal)
+
+document.getElementById('salvar')
+    .addEventListener('click', saveClient)
