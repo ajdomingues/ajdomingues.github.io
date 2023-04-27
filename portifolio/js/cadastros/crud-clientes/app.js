@@ -7,17 +7,35 @@ const closeModal = () => document.getElementById('modal')
     .classList.remove('active')
 
 const tempClient = {
-    nome: "Fulano",
-    email: "fulano@mail.com",
-    celular: "1191234567",
-    cidade: "Itaqua City"
+    nome: "Beltrano",
+    email: "beltrano@mail.com",
+    celular: "1191234578",
+    cidade: "Pinda"
 }
 
+const getLocalStorage = () => JSON.parse(localStorage.getItem('db_client')) ?? [] // se não houver banco, envia um array vazio
+const setLocalStorage = (dbClient) => localStorage.setItem("db_client", JSON.stringify(dbClient))
+
 //CRUD
+
+const deleteClient = (index) => {
+    const dbClient = readClient()
+    dbClient.splice(index, 1)
+    setLocalStorage(dbClient)
+}
+
+const updateClient = (index, client) => {
+    const dbClient = readClient()
+    dbClient[index] = client
+    setLocalStorage(dbClient)
+}
+
+const readClient = () => getLocalStorage()
+
 const createClient = (client) => {
-    const db_client = JSON.parse(localStorage.getItem('db_client'))    
-    db_client.push(client)
-    localStorage.setItem("db_client", JSON.stringify(db_client))
+    const dbClient = getLocalStorage()
+    dbClient.push(client)
+    setLocalStorage(dbClient)
 }
 
 // const cadastrarCliente = (client) => {
