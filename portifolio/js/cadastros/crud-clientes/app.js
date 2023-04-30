@@ -65,6 +65,7 @@ const saveClient = () => {
             cidade: document.getElementById('cidade').value
         }
         createClient(client)
+        updateTable()
         closeModal()
         //  console.log("cadastrando cliente")
     }
@@ -78,7 +79,6 @@ const createRow = (client) => {
         <td>${client.email}</td>
         <td>${client.celular}</td>
         <td>${client.cidade}</td>
-
                 <td>
                     <button type="button" class="button green">Editar</button>
                     <button type="button" class="button red">Excluir</button>
@@ -88,9 +88,9 @@ const createRow = (client) => {
 }
 
 //limpar tabela
-const clearTable=()=>{
+const clearTable = () => {
     const rows = document.querySelectorAll('#tableCliente>tbody tr')
-    rows.forEach
+    rows.forEach(row => row.parentNode.removeChild(row))
 }
 
 // update na tabela
