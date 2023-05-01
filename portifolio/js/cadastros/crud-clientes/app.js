@@ -8,12 +8,10 @@ const closeModal = () => {
     document.getElementById('modal').classList.remove('active')
 }
 
-const getLocalStorage = () => JSON.parse(localStorage.getItem('db_client')) ?? []
-// se não houver banco, envia um array vazio
+const getLocalStorage = () => JSON.parse(localStorage.getItem('db_client')) ?? [] // se não houver banco, envia um array vazio
 const setLocalStorage = (dbClient) => localStorage.setItem("db_client", JSON.stringify(dbClient))
 
 //CRUD
-
 const deleteClient = (index) => {
     const dbClient = readClient()
     dbClient.splice(index, 1)
@@ -50,10 +48,10 @@ const saveClient = () => {
     //verifica campos
     if (isValidFields()) {
         const client = {
-            nome: document.getElementById('nome').value,
-            email: document.getElementById('email').value,
+            nome: removeExtraSpaces(document.getElementById('nome').value),
+            email: allLowerCase(document.getElementById('email').value),
             celular: document.getElementById('celular').value,
-            cidade: document.getElementById('cidade').value
+            cidade: removeExtraSpaces(document.getElementById('cidade').value)
         }
         const index = document.getElementById('nome').dataset.index
         if (index == 'new') {
@@ -66,6 +64,18 @@ const saveClient = () => {
             closeModal()
         }
     }
+}
+
+//ajustar o texto deixando tudo minúsculo
+function allLowerCase(text) {
+    text = text.toLowerCase()
+    return text
+}
+
+//remover espaços desnecessários
+function removeExtraSpaces(text) {
+    text = text.replace(/( )+/g, " ").trim()
+    return text
 }
 
 //criar linhas
@@ -131,11 +141,6 @@ const editDelete = (event) => {
     }
 }
 
-function tudoMinusculo(texto) {
-    const textoAjustado = texto.toLowerCase()
-    return textoAjustado
-}
-
 updateTable()
 
 //Eventos
@@ -149,6 +154,4 @@ document.getElementById('salvar')
     .addEventListener('click', saveClient)
 
 document.querySelector('#tableClient>tbody')
-    .addEventListener('click', editDelete)
-
-   
+    .addEventListener('click', editDelete)  
