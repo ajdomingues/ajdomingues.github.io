@@ -150,6 +150,9 @@ document.getElementById('cadastrarCliente')
 document.getElementById('modalClose')
     .addEventListener('click', closeModal)
 
+    document.getElementById('cancelar')
+    .addEventListener('click', closeModal)
+
 document.getElementById('salvar')
     .addEventListener('click', saveClient)
 
