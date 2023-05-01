@@ -5,18 +5,11 @@ const openModal = () => document.getElementById('modal')
 
 const closeModal = () => {
     clearFields()
-    document.getElementById('modal')
-        .classList.remove('active')
+    document.getElementById('modal').classList.remove('active')
 }
 
-// const tempClient = {
-//     nome: "Shokko",
-//     email: "Shokko@mail.com",
-//     celular: "1191234578",
-//     cidade: "Pinda"
-// }
-
-const getLocalStorage = () => JSON.parse(localStorage.getItem('db_client')) ?? [] // se não houver banco, envia um array vazio
+const getLocalStorage = () => JSON.parse(localStorage.getItem('db_client')) ?? []
+// se não houver banco, envia um array vazio
 const setLocalStorage = (dbClient) => localStorage.setItem("db_client", JSON.stringify(dbClient))
 
 //CRUD
@@ -41,10 +34,6 @@ const createClient = (client) => {
     setLocalStorage(dbClient)
 }
 
-// const cadastrarCliente = (client) => {
-
-// }
-
 const isValidFields = () => {
     return document.getElementById('form').reportValidity()
 }
@@ -52,6 +41,8 @@ const isValidFields = () => {
 const clearFields = () => {
     const fields = document.querySelectorAll('.modal-field')
     fields.forEach(field => field.value = "")
+    document.getElementById('nome').dataset.index = 'new'
+    document.querySelector(".modal-header>h2").textContent = 'Novo Cliente'
 }
 
 // Interação com usuário
@@ -87,7 +78,7 @@ const createRow = (client, index) => {
         <td>${client.cidade}</td>
                 <td>
                     <button type="button" class="button green" id="edit-${index}">Editar</button>
-                    <button type="button" class="button red" id="delete-${index}">Excluir</button>
+                    <button type="button" class="button red" id="delete-${index}" >Excluir</button>
                 </td>
 `
     document.querySelector('#tableClient>tbody').appendChild(newRow)
@@ -95,7 +86,7 @@ const createRow = (client, index) => {
 
 //limpar tabela
 const clearTable = () => {
-    const rows = document.querySelectorAll('#tableCliente>tbody tr')
+    const rows = document.querySelectorAll('#tableClient>tbody tr')
     rows.forEach(row => row.parentNode.removeChild(row))
 }
 
@@ -117,8 +108,9 @@ const fillFields = (client) => {
 
 const editClient = (index) => {
     const client = readClient()[index]
-    fillFields(client) // preencher campos
     client.index = index
+    fillFields(client)// preencher campos
+    document.querySelector(".modal-header>h2").textContent = `Editando ${client.nome}`
     openModal()
 }
 
@@ -139,8 +131,12 @@ const editDelete = (event) => {
     }
 }
 
-updateTable()
+function tudoMinusculo(texto) {
+    const textoAjustado = texto.toLowerCase()
+    return textoAjustado
+}
 
+updateTable()
 
 //Eventos
 document.getElementById('cadastrarCliente')
@@ -154,3 +150,5 @@ document.getElementById('salvar')
 
 document.querySelector('#tableClient>tbody')
     .addEventListener('click', editDelete)
+
+   
