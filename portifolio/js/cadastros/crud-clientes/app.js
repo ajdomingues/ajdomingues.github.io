@@ -64,15 +64,21 @@ const saveClient = () => {
             celular: document.getElementById('celular').value,
             cidade: document.getElementById('cidade').value
         }
-        createClient(client)
-        updateTable()
-        closeModal()
-        //  console.log("cadastrando cliente")
+        const index = document.getElementById('nome').dataset.index
+        if (index == 'new') {
+            createClient(client)
+            updateTable()
+            closeModal()
+        } else {
+            updateClient(index, client)
+            updateTable()
+            closeModal()
+        }
     }
 }
 
 //criar linhas
-const createRow = (client) => {
+const createRow = (client, index) => {
     const newRow = document.createElement('tr')
     newRow.innerHTML = `
         <td>${client.nome}</td>
@@ -80,8 +86,8 @@ const createRow = (client) => {
         <td>${client.celular}</td>
         <td>${client.cidade}</td>
                 <td>
-                    <button type="button" class="button green">Editar</button>
-                    <button type="button" class="button red">Excluir</button>
+                    <button type="button" class="button green" id="edit-${index}">Editar</button>
+                    <button type="button" class="button red" id="delete-${index}">Excluir</button>
                 </td>
 `
     document.querySelector('#tableClient>tbody').appendChild(newRow)
@@ -100,6 +106,38 @@ const updateTable = () => {
     dbClient.forEach(createRow)
 }
 
+// Traz os dados vindos do banco para editar
+const fillFields = (client) => {
+    document.getElementById('nome').value = client.nome
+    document.getElementById('email').value = client.email
+    document.getElementById('celular').value = client.celular
+    document.getElementById('cidade').value = client.cidade
+    document.getElementById('nome').dataset.index = client.index
+}
+
+const editClient = (index) => {
+    const client = readClient()[index]
+    fillFields(client) // preencher campos
+    client.index = index
+    openModal()
+}
+
+const editDelete = (event) => {
+    if (event.target.type == 'button') {
+        const [action, index] = event.target.id.split('-')
+
+        if (action == 'edit') {
+            editClient(index)
+        } else {
+            const client = readClient()[index]
+            const response = confirm(`Deseja realmente excluir o cliente ${client.nome}`)
+            if (response) {
+                deleteClient(index)
+                updateTable()
+            }
+        }
+    }
+}
 
 updateTable()
 
@@ -113,3 +151,6 @@ document.getElementById('modalClose')
 
 document.getElementById('salvar')
     .addEventListener('click', saveClient)
+
+document.querySelector('#tableClient>tbody')
+    .addEventListener('click', editDelete)
