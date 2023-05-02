@@ -15,23 +15,33 @@
         <div class="container">
             <div class="title">Cálculo - IMC</div>
 
-            <div class="input">                
-                <input type="text" id="name" placeholder="Nome">
+            <div class="input">
+                <input type="text" id="name" required="required">
+                <span>Nome</span>
             </div>
 
-            <div class="input">                
-                <input type="number" id="height" placeholder="Altura">
+            <div class="input">
+                <input type="number" id="height" required="required">
+                <span>Altura</span>
             </div>
 
-            <div class="input">                
-                <input type="number" id="weight" placeholder="Peso">
-            </div>
-
+            <div class="input">
+                <input type="number" id="weight" required="required">
+                <span>Peso</span>
+            </div>          
+            
             <button id="calculate">Calcular</button>
             <div class="result" id="result"></div>
-        </main>
-        <p class="info">Essa aplicação não guardar registros no seu computador ou em um servidor. Os dados apresentados aqui não devem ser considerados como recomendação médica; para isso, procure um profissional da saúde.</p>        
+
+
+        </div>
+    </main>
+       
+    <p class="info">Essa aplicação não guardar registros no seu computador ou em um servidor. Os dados apresentados aqui
+        não devem ser considerados como recomendação médica; para isso, procure um profissional da saúde.</p>
     </div>
+
+
     <script src="app.js"></script>
 </body>
 
