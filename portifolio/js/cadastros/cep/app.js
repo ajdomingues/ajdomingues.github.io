@@ -23,7 +23,7 @@ const cepValido = (cep) => cep.length == 8 && ehNUmero(cep)
 
 const procuraCep = async () => {
     const cep = document.getElementById('cep').value
-    const url = `http://viacep.com.br/ws/${cep}/json/`
+    const url = `https://viacep.com.br/ws/${cep}/json/`
 
     if (cepValido(cep)) {
 
