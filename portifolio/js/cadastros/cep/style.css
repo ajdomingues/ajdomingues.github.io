@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    /* TODO: mudar fonte */
-    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;    
+    font-family: 'Noto Sans', sans-serif;
 }
 
-:root {
-    /* TODO: mudar cor */
-    --bg-color: #000;
+:root {    
+    --bg-color: #1d2b3a;;
     --primary-color: #80d8bb;
 }
 
