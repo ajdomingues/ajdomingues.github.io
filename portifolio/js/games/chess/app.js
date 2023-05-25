@@ -89,9 +89,20 @@ function createBoard() {
         }
 
         function checkIfValid(target) {
-            const targetId = Number( target.getAttribute('square-id')) || Number(target.parentNode.getAttribute('square-id'))
-        const startId=Number(startPositionId)
-        const piece = draggedElement.id
+            const targetId = Number(target.getAttribute('square-id')) || Number(target.parentNode.getAttribute('square-id'))
+            const startId = Number(startPositionId)
+            const piece = draggedElement.id
+
+            switch (piece) {
+                case 'pawn':
+                    const starterRow = [8, 9, 10, 11, 12, 13, 14, 15]
+                    if (
+                        starterRow.includes(startId) && startId + width * 2 === targetId
+                       ( startId + width)===targetId
+                    ) {
+                        return true
+                    }
+            }
         }
 
 
