@@ -1,0 +1,65 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 560px;
+    height: 560px;
+    border: solid black;
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+}
+
+.pac-dot {
+    background-color: green;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-sizing: border-box;
+}
+
+.wall {
+    background-color: blue;
+}
+
+.power-pellet {
+    background-color: green;
+    border-radius: 10px;
+    /* content: ""; */
+}
+
+.pac-man {
+    /* background-color: yellow; */
+    border-radius: 10px;
+}
+
+.pac-man::before {
+    content: "😋";
+}
+
+/* TODO: trocar quadrados dos fantasmas por emojis ou figuras */
+.blinky {
+    background-color: red;    
+}
+
+
+.pinky {
+    background-color: pink;
+}
+
+.inky {
+    background-color: cyan;
+}
+
+.clyde {
+    background-color: orange;
+}
+
+.pac-man {
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+.scared-ghost {
+    background-color: aquamarine;
+}

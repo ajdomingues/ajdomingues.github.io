@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #819ca9;
+    flex-direction: column;
+    gap: 30px;
+}
+
+ul {
+    color: #ffffff;
+}
+
+.inputBox {
+    position: relative;
+    width: 300px;
+}
+
+.inputBox input {
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    background: #819ca9;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px 10px;
+    pointer-events: none;
+    font-size: 1em;
+    transition: 0.5s;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.inputBox input:valid~span,
+.inputBox input:focus~span {
+    color: #29434e;
+    font-size: 0.65em;
+    transform: translateX(10px) translateY(-7px);
+    padding: 0 5px;
+    background: #819ca9;
+    border-left: 1px solid #546e7a;
+    border-right: 1px solid #546e7a;
+    letter-spacing: 0.2em;
+}
+
+.inputBox:nth-child(2) input:valid~span,
+.inputBox:nth-child(2) input:focus~span {
+    border-radius: 2px;
+    background: #546e7a;
+    color: #819ca9;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+    border: 1px solid #546e7a;
+}
+
+.botao {
+    background-color: #546e7a;
+    width: 180px;
+    height: 20px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1em;
+    position: sticky;
+    top: 80%;
+    left: 40%;
+}
+
+.botao:hover {
+    background-color: #9fa1db;
+}
+
+.btn-delete {
+    background-color: #546e7a;
+    width: 60px;
+    height: 20px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1em;
+    
+}
+
+.btn-delete:hover {
+    background-color: #9fa1db;
+}

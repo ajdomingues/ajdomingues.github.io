@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Criando lista</title>
+</head>
+
+<body>
+    <!-- formulário -->
+    <form>
+        <div class="inputBox">
+            <input name="campoCriaPost" required="required" />
+            <span>Digite o seu item para a lista</span>
+        </div>
+        <button class="botao" type="submit">Adicionar na lista</button>
+    </form>
+    <!-- lista -->
+    <ul class="listaDePosts">
+    </ul>
+
+    <!-- script de funções -->
+    <script>
+        const $meuForm = document.querySelector('form');
+        console.log($meuForm);
+
+        $meuForm.addEventListener('submit', function criaPostConytroller(infosDoEvento) {
+            infosDoEvento.preventDefault();
+            const $campoCriaPost = document.querySelector('input[name="campoCriaPost"]');
+            const $listaDePosts = document.querySelector('.listaDePosts');
+
+            $listaDePosts.insertAdjacentHTML('afterbegin', `<li>${$campoCriaPost.value}</li>`)
+            $campoCriaPost.value = '';
+        });
+    </script>
+</body>
+
+</html>

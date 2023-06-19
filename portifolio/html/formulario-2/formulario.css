@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1d2b3a;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#titulo {
+    font-family: sans-serif;
+    /* color: #380B61; */
+    margin-left: 7%;
+
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    background: #1d2b3a;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+#subtitulo {
+    font-family: sans-serif;
+    /* color: #380B61; */
+    margin-left: 10%;
+
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    background: #1d2b3a;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+
+}
+
+.inputBox {
+    position: relative;
+    width: 250px;
+}
+
+.inputBox input {
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    background: #1d2b3a;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.inputBox textarea {
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    background: #1d2b3a;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.inputBox label {
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    /* border-radius: 5px; */
+    width: 100%;
+    /* background: #1d2b3a; */
+    /* border: 1px solid rgba(255, 255, 255, 0.25); */
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.inputBox select option {
+    padding-right: 1em;
+    /* padding: 10px 10px; */
+    border: none;
+    outline: none;
+    /* border-radius: 5px; */
+    width: 100%;
+    /* background: #1d2b3a; */
+    /* border: 1px solid rgba(255, 255, 255, 0.25); */
+    color: #fff;
+    background-color: #1d2b3a;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px 10px;
+    pointer-events: none;
+    font-size: 1em;
+    transition: 0.5s;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.inputBox input:valid~span,
+.inputBox input:focus~span,
+.inputBox textarea:valid~span,
+.inputBox textarea:focus~span
+ {
+    color: #00dfc4;
+    font-size: 0.65em;
+    transform: translateX(10px) translateY(-7px);
+    padding: 0 5px;
+    background: #1d2b3a;
+    border-left: 1px solid #00dfc4;
+    border-right: 1px solid #00dfc4;
+    letter-spacing: 0.2em;
+}
+
+.inputBox:nth-child(2) input:valid~span,
+.inputBox:nth-child(2) input:focus~span,
+.inputBox:nth-child(2) textarea:valid~span,
+.inputBox:nth-child(2) textarea:focus~span {
+    border-radius: 2px;
+    background: #00dfc4;
+    color: #1d2b3a;
+}
+
+.inputBox input:valid,
+.inputBox input:focus,
+.inputBox textarea:valid,
+.inputBox textarea:focus {
+    border: 1px solid #00dfc4;
+}
+
+.botao {
+    font-size: 1.2em;
+    background: #00dfc4;
+    border: 0;
+    margin-bottom: 1em;
+    color: #1d2b3a;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 104%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.botao:hover {
+    background: #fff;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+}
+
+.botao select {
+    cursor: pointer;
+}
+
+check {
+    position: relative;
+    width: 250px;     
+}
+
+#check label {
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    /* border-radius: 5px; */
+    width: 100%;
+    /* background: #1d2b3a; */
+    /* border: 1px solid rgba(255, 255, 255, 0.25); */
+    color: #fff;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+#check {
+    display: inline-block;
+
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+     border-radius: 5px; 
+    /* width: 100%; */
+     background: #1d2b3a; 
+     border: 1px solid rgba(255, 255, 255, 0.25); 
+    color: #fff;
+    font-size: 1em;
+    /* transition: 0.5s;   */
+}
