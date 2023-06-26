@@ -51,6 +51,7 @@ function moveShooter(e) {
     }
     squares[currentShooterIndex].classList.add('shooter')
 }
+
 document.addEventListener('keydown', moveShooter)
 
 function moveInvaders() {
@@ -74,7 +75,6 @@ function moveInvaders() {
         }
     }
 
-
     for (let i = 0; i < alienInvaders.length; i++) {
         alienInvaders[i] += direction
     }
@@ -95,11 +95,10 @@ function moveInvaders() {
     if (aliensRemoved.length === alienInvaders.length) {
         resultDisplay.innerHTML = 'YOU WIN!'
         clearInterval(invadersId)
-
     }
 }
 
-invadersId = setInterval(moveInvaders, 300)
+invadersId = setInterval(moveInvaders, 500)
 
 function shoot(e) {
     let laserId
@@ -121,14 +120,12 @@ function shoot(e) {
             aliensRemoved.push(alienRemoved)
             results++
             resultDisplay.innerHTML = results
-
         }
     }
     switch (e.key) {
         case 'ArrowUp':
             laserId = setInterval(moveLaser, 100)
     }
-
 }
 
 document.addEventListener('keydown', shoot)

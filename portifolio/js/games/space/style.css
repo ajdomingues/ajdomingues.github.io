@@ -16,14 +16,14 @@
     border-radius: 10px;
 }
 
-.shooter {
-    background-color: green;    
+.shooter::before {
+    content: "🚀";
 }
 
-.laser{
+.laser {
     background-color: orange;
 }
 
-.boom{
+.boom {
     background-color: red;
 }
