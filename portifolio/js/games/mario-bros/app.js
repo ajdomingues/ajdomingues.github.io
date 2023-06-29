@@ -104,7 +104,7 @@ scene("game", ({ level, score }) => {
         }
     ])
 
-    add([text('level ' + parseInt(level + 1)), pos(40, 6)])
+    add([text(' level ' + parseInt(level + 1)), pos(40, 6)])
 
     function big() {
         let timer = 0
