@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
-body {    
+
+body {
     font-family: 'Noto Sans', sans-serif;
 }
 
@@ -17,7 +18,7 @@ li {
     margin: 5px;
 }
 
-.tag label{
+.tag label {
     color: #fff;
     font-size: 25px;
     vertical-align: top;
@@ -41,4 +42,16 @@ blockquote p::before {
 
 blockquote p::after {
     content: '\201D';
+}
+
+a:visited a:link{
+    text-decoration: none;
+} 
+
+a:hover {
+    background-color: lightgreen;
+}
+
+a:active {
+    background-color: hotpink;
 }
