@@ -11,7 +11,6 @@ h1, h2, h3, h4, h5, e h6
 <h6>h6</h6>
 ```
 
-
 # Parágrafos
 tag p
 ```html
@@ -41,6 +40,5 @@ Espaço exagerado
 
 <p>Pra funcionar, teria que ser assim Espaço &nbsp;&nbsp;&nbsp;&nbsp; bem exagerados entre palavras</p>
 ```
-
 
 # Listas
