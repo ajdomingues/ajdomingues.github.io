@@ -43,7 +43,7 @@ main {
     align-items: center;
     width: 100%;
     height: 50px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     border-bottom: solid 5px var(--text-color);
     margin-bottom: 20px;
