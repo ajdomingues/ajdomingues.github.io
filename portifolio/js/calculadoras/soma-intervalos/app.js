@@ -6,9 +6,7 @@ function calcInterval() {
 
     if (firstNumber != '' && secondNumber != '') {
         const result = document.getElementById('result')
-
-        let summation = calc(checkNumbers(firstNumber, secondNumber))
-
+        const summation = calc(parseInt(firstNumber), parseInt(secondNumber))
         result.textContent = `A soma de todos os números no intervalo entre ${firstNumber} e ${secondNumber} é ${summation}.`
 
     } else {
@@ -16,10 +14,22 @@ function calcInterval() {
     }
 }
 
-function checkNumbers(min, max) {
-    if (min > max) [max, min] = [min, max]
-    return max - min
+function calc(a, b) {
+    let min = 0
+    let max = 0
+    let soma = 0
+
+    if (a < b) {
+        min = a
+        max = b
+    } else {
+        min = b
+        max = a
+    }
+    for (min; min <= max; min++) {
+        soma += min
+    }
+    return soma
 }
-let calc = x => (x / 2) * (x + 1)
 
 calculate.addEventListener('click', calcInterval)
