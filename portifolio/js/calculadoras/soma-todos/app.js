@@ -1,6 +1,6 @@
 const calculate = document.getElementById('calculate')
 
-function calcInterval() {
+function calcGas() {
     const firstNumber = document.getElementById('firstNumberEnter').value
 
     if (firstNumber != '') {
@@ -13,9 +13,8 @@ function calcInterval() {
     } else {
         result.textContent = `Entrada inválida.`
     }
-    console.log(calc(firstNumber))
 }
 
 let calc = x => (x / 2) * (x + 1)
 
-calculate.addEventListener('click', calcInterval)
+calculate.addEventListener('click', calcGas)
