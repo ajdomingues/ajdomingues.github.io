@@ -4,7 +4,7 @@ function calcGas() {
     const etanolPrice = parseFloat(document.getElementById('etanolPriceEnter').value)
     const gasPrice = parseFloat(document.getElementById('gasPriceEnter').value)
 
-    if (etanolPrice != '' && gasPrice != '') {
+    if (etanolPrice != '' && gasPrice != '' && etanolPrice > 0 && gasPrice > 0) {
         const result = document.getElementById('result')
         let summation = calc(etanolPrice, gasPrice)
         result.textContent = indicator(summation)
