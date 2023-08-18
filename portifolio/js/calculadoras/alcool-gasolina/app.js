@@ -15,15 +15,8 @@ function calcGas() {
 
 let calc = (x, y) => (x / y)
 
-function indicator(summation) {
-    const factor = 0.7
-    let results = ''
-    if (summation <= factor) {
-        results = `Cálculo gerado: ${summation}. É melhor utilizar Etanol.`
-    } else {
-        results = `Cálculo gerado: ${summation}. É melhor utilizar Gasolina.`
-    }
-    return results
-}
+const factor = 0.7
+
+let indicator = (summation) => summation <= factor ? `Cálculo gerado: ${summation}. É melhor utilizar Etanol.` : `Cálculo gerado: ${summation}. É melhor utilizar Gasolina.`
 
 calculate.addEventListener('click', calcGas)
