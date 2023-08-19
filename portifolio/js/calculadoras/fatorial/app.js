@@ -1,6 +1,6 @@
 const calculate = document.getElementById('calculate')
 
-function calcFAtorial() {
+function calcFatorial() {
     const numberEnter = document.getElementById('numberEnter').value
 
     if (numberEnter != '' && numberEnter > 0) {
@@ -16,4 +16,4 @@ function calcFAtorial() {
     }
 }
 
-calculate.addEventListener('click', calcFAtorial)
+calculate.addEventListener('click', calcFatorial)

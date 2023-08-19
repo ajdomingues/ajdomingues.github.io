@@ -98,10 +98,10 @@ const handleFormSubmit = event => {
     const transactionAmount = inputTransactionAmount.value.trim()
     const isSomeInputEmpty = transactionName === '' || transactionAmount === ''
 
-    if (isSomeInputEmpty) {        
+    if (isSomeInputEmpty) {
         modal.showModal()
-        return       
-    }    
+        return
+    }
 
     addToTransactionsArray(transactionName, transactionAmount)
     init()
