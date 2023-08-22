@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans',sans-serif;
+}
+
+button{
+    height: 32px;
+    width: 32px;
+    border: 0;
+}
+
+.br{
+    background-image:url( "./img/bra.ico");
+}
+
+.es{
+    background-image:url( "./img/esp.ico");
+}
+
+.us{
+    background-image:url( "./img/usa.ico");
+}
