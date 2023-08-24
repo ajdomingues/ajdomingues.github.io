@@ -6,25 +6,29 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Open Sans',sans-serif;
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 
-button{
+button {
     height: 32px;
     width: 32px;
     border: 0;
     cursor: pointer;
 }
 
-.br{
-    background-image:url( "./img/bra.ico");
+.br {
+    background-image: url("./img/bra.ico");
 }
 
-.es{
-    background-image:url( "./img/esp.ico");
+.es {
+    background-image: url("./img/esp.ico");
 }
 
-.us{
-    background-image:url( "./img/usa.ico");
+.us {
+    background-image: url("./img/usa.ico");
+}
+
+.author {
+    font-size: large;
 }
