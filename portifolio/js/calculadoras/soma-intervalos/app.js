@@ -15,19 +15,13 @@ function calcInterval() {
 }
 
 function calc(a, b) {
-    let min = 0
-    let max = 0
     let soma = 0
 
-    if (a < b) {
-        min = a
-        max = b
-    } else {
-        min = b
-        max = a
+    if (a > b) {
+        [a, b] = [b, a]
     }
-    for (min; min <= max; min++) {
-        soma += min
+    for (let i = a; i <= b; i++) {
+        soma += i
     }
     return soma
 }
