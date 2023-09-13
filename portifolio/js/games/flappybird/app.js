@@ -15,7 +15,7 @@ function Barreira(reversa = false) {
     this.setAltura = altura => corpo.style.height = `${altura}px`
 }
 
-function PardeBarreiras(altura, abertura, x) {
+function ParBarreiras(altura, abertura, x) {
     this.elemento = novoElemento('div', 'par-de-barreiras')
 
     this.superior = new Barreira(true)
@@ -38,5 +38,11 @@ function PardeBarreiras(altura, abertura, x) {
     this.setX(x)
 }
 
-const b = new PardeBarreiras(700, 200, 400)
-document.querySelector('[acme-flappy]').appendChild(b.elemento)
+function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
+    this.pares = [
+        new ParBarreiras(altura, abertura, largura),
+        new ParBarreiras(altura, abertura, largura + espaco),
+        new ParBarreiras(altura, abertura, largura + espaco * 2),
+        new ParBarreiras(altura, abertura, largura + espaco * 3)
+    ]
+}
