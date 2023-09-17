@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'Pixel';
-    src: url('../fonts/Pixel.ttf');
+    src: url('./fonts/Pixel.ttf');
 }
 
 [acme-flappy] {
@@ -20,8 +20,7 @@
 .passaro {
     position: absolute;
     width: 60px;
-    left: calc(50% - 30px);
-    bottom: 50%;
+    left: calc(50% - 30px);    
 }
 
 .par-de-barreiras {
@@ -51,13 +50,14 @@
     width: 110px;
     background: linear-gradient(90deg, #639301, #a5e82e);
     border-left: 2px solid #000;
-    border-right: 2px solid #000;    
+    border-right: 2px solid #000;
 }
 
-.progresso{
+.progresso {
     position: absolute;
     top: 10px;
     right: 10px;
     font-family: Pixel;
     font-size: 70px;
+    z-index: 100;
 }
