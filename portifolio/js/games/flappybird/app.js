@@ -53,8 +53,16 @@ function Barreiras(altura, largura, abertura, espaco, notificarPonto) {
 
             if (par.getX() < -par.getLargura()) {
                 par.setX(par.getX() + espaco * this.pares.length)
+                par.sortearAbertura()
             }
+            const meio = largura / 2
+            const cruzouMeio = par.getX() + deslocamento >= meio && par.getX() < meioc
 
+            if (cruzouMeio) notificarPonto()
         })
     }
 }
+
+const barreiras = new Barreiras(700, 1200, 200, 400)
+const areaDoJOgo = document.querySelector('[acme-flappy]')
+barreiras.pares.forEach(par => areaDoJOgo.appendChild(par.elemento))
