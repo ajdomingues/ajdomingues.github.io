@@ -1,6 +1,6 @@
 const calculate = document.getElementById('calculate')
 
-function calcGas() {
+function calcAll() {
     const firstNumber = document.getElementById('firstNumberEnter').value
 
     if (firstNumber != '') {
@@ -17,4 +17,4 @@ function calcGas() {
 
 let calc = x => (x / 2) * (x + 1)
 
-calculate.addEventListener('click', calcGas)
+calculate.addEventListener('click', calcAll)
