@@ -1,4 +1,4 @@
-calculate = document.getElementById('calculate')
+calcular = document.getElementById('calcular')
 const notasDisponiveis = [100, 50, 20, 10, 5, 2, 1]
 
 function quantidadeNotas(valor, nota) {
@@ -18,19 +18,23 @@ function quantidadesPorNota(valor, notas) {
 function exibir(valor, notas) {
     let resultado = ''
     const notasNecessarias = quantidadesPorNota(valor, notas)
-    const result = document.getElementById('result')
-    resultado += `$ ${valor}`
+    const saida = document.getElementById('resultados')
 
-    notasNecessarias.forEach(({ quantidade, nota }) => {
-        resultado += `${quantidade} nota(s) de $ ${nota},00`
-    })
+    if (valor > 0 && valor !='') {
+        resultado += `$ ${valor}\n`
 
-    result.textContent = resultado
+        notasNecessarias.forEach(({ quantidade, nota }) => {
+            resultado += `${quantidade} nota(s) de $ ${nota},00\n`
+        })
+        saida.textContent = resultado
+    } else {
+        saida.textContent = 'Valor inválido!'
+    }
 }
 
 function executar() {
-    const valorTotal = document.getElementById('numberEnter').value
+    const valorTotal = document.getElementById('valorEntrada').value
     exibir(valorTotal, notasDisponiveis)
 }
 
-calculate.addEventListener('click', executar)
+calcular.addEventListener('click', executar)
