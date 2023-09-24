@@ -4,5 +4,8 @@ module.exports = {
     },
     tudoMinusculo(texto) {
         return `${texto}`.toLowerCase()
+    },
+    juntarTextos(texto1, texto2) {
+        return texto1.concat(texto2)
     }
 }
