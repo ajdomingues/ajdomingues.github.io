@@ -18,7 +18,7 @@ module.exports = {
         return num1.toFixed(2)
     },
     romanoToInt(romano) {
-        let n = 0;        
+        let n = 0;
         const numeros = {
             'I': 1,
             'V': 5,
@@ -41,5 +41,8 @@ module.exports = {
         }
 
         return n;
+    },
+    geradorNumeros() {
+        return Math.floor(Math.random() * 100)
     }
 }
