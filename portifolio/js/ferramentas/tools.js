@@ -44,5 +44,20 @@ module.exports = {
     },
     geradorNumeros() {
         return Math.floor(Math.random() * 100)
-    }
+    },
+    somar(num1, num2) {
+        return num1 + num2
+    },
+    subtrair(num1, num2) {
+        return num1 - num2
+    },
+    multiplicar(num1, num2) {
+        return num1 * num2
+    },
+    dividir(num1, num2) {
+        return num1 / num2
+    },
+    restoDivisao(num1, num2) {
+        return num1 % num2
+    },
 }

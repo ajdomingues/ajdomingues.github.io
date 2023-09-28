@@ -1,3 +1,4 @@
-const { juntarTextos, converterParaBinario, converterParaDecimal, arredondar, romanoToInt, tudoMaiusculo, geradorNumeros } = require('./tools')
+const { juntarTextos, converterParaBinario, converterParaDecimal, arredondar, romanoToInt, tudoMaiusculo, geradorNumeros,
+    somar, subtrair, multiplicar, dividir, restoDivisao } = require('./tools')
 
-console.log(geradorNumeros())
+console.log(restoDivisao(3, 2))
