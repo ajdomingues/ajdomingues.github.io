@@ -60,4 +60,7 @@ module.exports = {
     restoDivisao(num1, num2) {
         return num1 % num2
     },
+    potencia(num1, exp) {
+        return Math.pow(num1, exp)
+    }
 }
