@@ -62,5 +62,9 @@ module.exports = {
     },
     potencia(num1, exp) {
         return Math.pow(num1, exp)
+    },
+    percentual(num1, percent) {
+        return ((num1 * percent) / 100)
     }
+
 }
