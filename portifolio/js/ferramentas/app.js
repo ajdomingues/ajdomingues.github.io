@@ -1,4 +1,4 @@
 const { juntarTextos, converterParaBinario, converterParaDecimal, arredondar, romanoToInt, tudoMaiusculo, geradorNumeros,
-    somar, subtrair, multiplicar, dividir, restoDivisao, potencia, percentual, tabuada } = require('./tools')
+    somar, subtrair, multiplicar, dividir, restoDivisao, potencia, percentual, tabuada, somaTodosAte } = require('./tools')
 
-tabuada(7)
+console.log(somaTodosAte(100))

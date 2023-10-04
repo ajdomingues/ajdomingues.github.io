@@ -71,5 +71,9 @@ module.exports = {
             console.log(`${num1} x ${i} = ${num1 * i}`)
         }
     },
+    somaTodosAte(num1) {
+        let calcular = num1 => (num1 / 2) * (num1 + 1)
+         return calcular(num1)
+    },
 
 }

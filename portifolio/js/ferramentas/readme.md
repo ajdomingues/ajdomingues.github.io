@@ -139,3 +139,12 @@ for (let i = 1; i <= 10; i++) {
     console.log(`${num1} x ${i} = ${num1 * i}`)
 }
 ```
+
+## Calcular todos o números até
+- Calcular todos os números de 1 até o alvo.
+- Nesse algoritmo adaptamos a [Soma de Gauss](https://mundoeducacao.uol.com.br/matematica/soma-gauss.htm). Pegamos o número alvo dividimos por 2 e pegamos o resultado disso e multiplicamos pelo número alvo + 1. Exemplo, queremos saber a soma de todos os números até 100: (100 / 2) * (100 + 1) = 5050.
+
+
+```js
+let calcular = x => (x / 2) * (x + 1)
+```
