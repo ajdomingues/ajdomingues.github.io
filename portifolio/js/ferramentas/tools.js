@@ -73,7 +73,11 @@ module.exports = {
     },
     somaTodosAte(num1) {
         let calcular = num1 => (num1 / 2) * (num1 + 1)
-         return calcular(num1)
+        return calcular(num1)
+    },
+    areaCirculo(raio) {
+        const area = Math.PI * Math.pow(raio, 2)
+        return area
     },
 
 }

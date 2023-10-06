@@ -148,3 +148,11 @@ for (let i = 1; i <= 10; i++) {
 ```js
 let calcular = x => (x / 2) * (x + 1)
 ```
+
+## Área do círculo
+- Calcular a área do círculo
+- É recebido o raio através de parâmetro. O cálculo é veio usando a constante interna Math.PI multiplicada pela função de potência, Math.pow com o raio elevado a 2.
+
+```js
+const area = Math.PI * Math.pow(raio, 2)
+```
