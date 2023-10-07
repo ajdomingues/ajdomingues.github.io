@@ -156,3 +156,14 @@ let calcular = x => (x / 2) * (x + 1)
 ```js
 const area = Math.PI * Math.pow(raio, 2)
 ```
+
+## Verificar a ordem dos números - 1
+Verificar numa sequência de 2 números:
+ - menor.
+ - maior.
+
+Os números são recebidos por parâmetro. Através de uma condicional, verificamos se o primeiro é maior que o segundo. Caso seja, é invertido seus valores.
+
+```js
+if (min > max) [max, min] = [min, max]
+```
