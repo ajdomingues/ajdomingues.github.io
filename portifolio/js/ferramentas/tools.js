@@ -79,9 +79,15 @@ module.exports = {
         const area = Math.PI * Math.pow(raio, 2)
         return area
     },
-    ordem(min, max) {
+    ordem_0(min, max) {
         if (min > max) [max, min] = [min, max]
         return `menor ${min}, maior ${max}`
     },
+
+    ordem_1(min, max) {
+        if (min > max) [max, min] = [min, max]
+        return [min, max]
+    },
+    
 
 }
