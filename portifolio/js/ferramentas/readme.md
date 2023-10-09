@@ -126,10 +126,22 @@ return Math.pow(num1, exp)
 - É recebido por parâmetro o número e o percentual desejado.
 - Multiplica-se o número pelo percentual.
 - O resultado da multiplicação é dividido por 100.
-- Retorna o resultado.
+
 ```js
 return ((num1 * percent) / 100)
 ```
+
+## Soma percentual
+
+- É recebido o número e o percentual alvo por parâmetro
+- Multiplica-se o número pelo percentual.
+- O resultado da multiplicação é dividido por 100.
+- O resultado é somado ao próprio número.
+
+```js
+ return (num1 + ((num1 * percent) / 100))
+```
+
 ## Tabuada
 - É recebido por parâmetro o número alvo.
 - Através do laço for com 10 posições - nesse caso, o laço começa em 1 invés de 0 porque senão ficaria o primeiro item como 0 x número alvo - , é exibido a conta e depois calculado o número alvo x o número no qual o laço se encontra.

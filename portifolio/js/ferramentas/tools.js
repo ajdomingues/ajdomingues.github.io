@@ -66,6 +66,9 @@ module.exports = {
     percentual(num1, percent) {
         return ((num1 * percent) / 100)
     },
+    somaPercentual(num1, percent) {
+        return (num1 + ((num1 * percent) / 100))
+    },
     tabuada(num1) {
         for (let i = 1; i <= 10; i++) {
             console.log(`${num1} x ${i} = ${num1 * i}`)
@@ -88,6 +91,5 @@ module.exports = {
         if (min > max) [max, min] = [min, max]
         return [min, max]
     },
-    
 
 }
