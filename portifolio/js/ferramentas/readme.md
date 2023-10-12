@@ -132,11 +132,19 @@ return ((num1 * percent) / 100)
 ```
 
 ## Soma percentual
-
 - É recebido o número e o percentual alvo por parâmetro
 - Multiplica-se o número pelo percentual.
 - O resultado da multiplicação é dividido por 100.
 - O resultado é somado ao próprio número.
+
+```js
+ return (num1 + ((num1 * percent) / 100))
+```
+## Subtrair percentual
+- É recebido o número e o percentual alvo por parâmetro
+- Multiplica-se o número pelo percentual.
+- O resultado da multiplicação é dividido por 100.
+- É subtraído do número o valor acima.
 
 ```js
  return (num1 + ((num1 * percent) / 100))
@@ -168,7 +176,6 @@ let calcular = x => (x / 2) * (x + 1)
 ```js
 const area = Math.PI * Math.pow(raio, 2)
 ```
-
 ## Verificar a ordem dos números - 1
 Verificar numa sequência de 2 números:
  - menor.
@@ -178,4 +185,12 @@ Os números são recebidos por parâmetro. Através de uma condicional, verifica
 
 ```js
 if (min > max) [max, min] = [min, max]
+```
+
+## Gerador letras
+- Sortear letras aleatórias
+
+Aqui criei uma constante com todas as letras de a à z. Em seguida, criei uma variável par armazenar as letras geradas. Utilizei o Math.floor e o random para sortear uma letra fazendo com que o número gerado esteja entre o range de 0 à 25 - para percorrer a sequência toda (26 letras).
+```js
+letrasGeradas += letras[Math.floor(Math.random() * 25)]
 ```

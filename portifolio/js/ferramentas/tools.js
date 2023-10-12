@@ -69,6 +69,9 @@ module.exports = {
     somaPercentual(num1, percent) {
         return (num1 + ((num1 * percent) / 100))
     },
+    subtrairPercentual(num1, percent) {
+        return (num1 - ((num1 * percent) / 100))
+    },
     tabuada(num1) {
         for (let i = 1; i <= 10; i++) {
             console.log(`${num1} x ${i} = ${num1 * i}`)
@@ -90,6 +93,15 @@ module.exports = {
     ordem_1(min, max) {
         if (min > max) [max, min] = [min, max]
         return [min, max]
+    },
+
+    geradorLetras() {
+        const letras = ['A', 'B', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+        let letrasGeradas = ''
+        letrasGeradas += letras[Math.floor(Math.random() * 25)]
+        letrasGeradas += letras[Math.floor(Math.random() * 25)]
+        letrasGeradas += letras[Math.floor(Math.random() * 25)]
+        return letrasGeradas        
     },
 
 }
