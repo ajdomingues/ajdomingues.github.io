@@ -194,3 +194,11 @@ Aqui criei uma constante com todas as letras de a à z. Em seguida, criei uma va
 ```js
 letrasGeradas += letras[Math.floor(Math.random() * 25)]
 ```
+
+## Contar dias
+- É recebido a quantidade de anos.
+Utilizamos uma const para fazer o cálculo recebendo a quantidade de anos e multiplicado por 365.
+
+```js
+const contarDias = anos => anos * 365
+```

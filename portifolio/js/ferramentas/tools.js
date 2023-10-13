@@ -111,5 +111,9 @@ module.exports = {
         letrasGeradas += letras[Math.floor(Math.random() * 25)]
         return letrasGeradas
     },
+    contarDias(anos) {
+        const contarDias = anos => anos * 365
+        return `${contarDias(anos)} dias.`
+    },
 
 }
