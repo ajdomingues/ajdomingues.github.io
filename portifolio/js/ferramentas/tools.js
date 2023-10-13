@@ -45,6 +45,14 @@ module.exports = {
     geradorNumeros() {
         return Math.floor(Math.random() * 100)
     },
+
+    geradorTresNumeros() {
+        let numerosGerados = Math.floor(Math.random() * 100)
+        numerosGerados += Math.floor(Math.random() * 100)
+        numerosGerados += Math.floor(Math.random() * 100)
+        return numerosGerados
+    },
+
     somar(num1, num2) {
         return num1 + num2
     },
@@ -101,7 +109,7 @@ module.exports = {
         letrasGeradas += letras[Math.floor(Math.random() * 25)]
         letrasGeradas += letras[Math.floor(Math.random() * 25)]
         letrasGeradas += letras[Math.floor(Math.random() * 25)]
-        return letrasGeradas        
+        return letrasGeradas
     },
 
 }
