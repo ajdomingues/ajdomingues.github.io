@@ -3,4 +3,4 @@ const { juntarTextos, converterParaBinario, converterParaDecimal, arredondar, ro
     tabuada, somaTodosAte, areaCirculo, ordem_0, ordem_1, geradorLetras, geradorTresNumeros,
     contarDias } = require('./tools')
 
-console.log(contarDias(10))
+console.log(contarDias(11))
