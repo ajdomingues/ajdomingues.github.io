@@ -202,3 +202,10 @@ Utilizamos uma const para fazer o cálculo recebendo a quantidade de anos e mult
 ```js
 const contarDias = anos => anos * 365
 ```
+
+## Calcular aprovação
+- Verificar a nota recebida por parâmetro. O cálculo foi armazenado dentro de uma const onde verifica se a nota é maior ou igual a determinada nota de corte. Assim, utiliza-se uma ternária para determinar o conteúdo se é verdadeiro (aprovado) ou falso (reprovado).
+
+```js
+const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
+```

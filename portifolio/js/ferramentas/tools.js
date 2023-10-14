@@ -115,5 +115,10 @@ module.exports = {
         const contarDias = anos => anos * 365
         return `${contarDias(anos)} dias.`
     },
+    calcularAprovacao(nota) {
+        const notaCorte = 7
+        const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
+        return resultado(nota)
+    },
 
 }
