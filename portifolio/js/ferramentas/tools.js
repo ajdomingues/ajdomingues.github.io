@@ -121,4 +121,8 @@ module.exports = {
         return resultado(nota)
     },
 
+    converterCelsiusFarenheit(temp) {
+        return `${temp}°C é ${(temp * 1.8) + 32}°F `
+    },
+
 }

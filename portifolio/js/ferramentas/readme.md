@@ -209,3 +209,14 @@ const contarDias = anos => anos * 365
 ```js
 const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
 ```
+
+## Conversores
+
+### Temperatura
+
+#### Converter graus  Celsius em Farenheit
+- A fórmula é: F = C x 1,8 + 32. Onde F é o Farenheit e C a temperatura em Celsius.
+
+```js
+ `${temp}°C é ${(temp * 1.8) + 32}°F `
+```
