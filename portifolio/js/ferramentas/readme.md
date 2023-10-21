@@ -214,9 +214,16 @@ const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
 
 ### Temperatura
 
-#### Converter graus  Celsius em Farenheit
+#### Converter graus Celsius em Farenheit
 - A fórmula é: F = C x 1,8 + 32. Onde F é o Farenheit e C a temperatura em Celsius.
 
 ```js
  `${temp}°C é ${(temp * 1.8) + 32}°F `
+```
+
+#### Converter graus Farenheit em Celsius
+- A fórmula é: C = F -32 / 1,8. Onde F é o Farenheit e C a temperatura em Celsius.
+
+```js
+ `${temp}°F é ${(temp - 32) / 1.8}°C`
 ```
