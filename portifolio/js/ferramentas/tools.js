@@ -129,4 +129,10 @@ module.exports = {
         return `${temp}°F é ${(temp - 32) / 1.8}°C `
     },
 
+    converterCelsiusKelvin(temp) {
+        return `${temp}°C é ${temp + 273.15}°K `
+    },
+
+
+
 }

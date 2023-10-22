@@ -227,3 +227,11 @@ const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
 ```js
  `${temp}°F é ${(temp - 32) / 1.8}°C`
 ```
+#### Converter graus Celsius em Kelvin
+- A fórmula é:  TK = TC + 273. T de temperatura, K de Kelvin e C de Celsius.
+
+```js
+ `${temp}°C é ${temp + 273.15}°K `
+```
+
+
