@@ -139,6 +139,10 @@ module.exports = {
 
     converterkmMilhas(vel1) {
         return `${vel1} km é ${vel1 / 1.609344} mi`
-    }
+    },
+
+    converterMilhasKm(vel1) {
+        return `${vel1} Mi é ${vel1 * 1.609344} km`
+    },
 
 }

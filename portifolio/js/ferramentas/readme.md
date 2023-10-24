@@ -241,5 +241,11 @@ const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
 ```js
 `${vel1} km é ${vel1 / 1.609344} mi`
 ```
+#### Milhas em quilômetros
+- A fórmula é km = mi * 1.609344
+
+```js
+`${vel1} Mi é ${vel1 * 1.609344} km`
+```
 
 
