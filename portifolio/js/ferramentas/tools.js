@@ -133,6 +133,10 @@ module.exports = {
         return `${temp}°C é ${temp + 273.15}°K `
     },
 
+    converterKelvinCelsius(temp) {
+        return `${temp}°K é ${temp - 273.15}°C `
+    },
+
 
 
 }
