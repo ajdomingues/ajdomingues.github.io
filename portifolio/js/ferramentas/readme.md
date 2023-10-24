@@ -234,4 +234,12 @@ const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
  `${temp}°C é ${temp + 273.15}°K `
 ```
 
+### Distâncias
+#### Quilômetros em milhas
+- A fórmula é mi = km/1.609344
+
+```js
+`${vel1} km é ${vel1 / 1.609344} mi`
+```
+
 

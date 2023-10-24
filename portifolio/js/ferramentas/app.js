@@ -2,6 +2,6 @@ const { juntarTextos, converterParaBinario, converterParaDecimal, arredondar, ro
     somar, subtrair, multiplicar, dividir, restoDivisao, potencia, percentual, somaPercentual, subtrairPercentual,
     tabuada, somaTodosAte, areaCirculo, ordem_0, ordem_1, geradorLetras, geradorTresNumeros,
     contarDias, calcularAprovacao, converterCelsiusFarenheit, converterFarenheitCelsius, converterCelsiusKelvin,
-converterKelvinCelsius } = require('./tools')
+converterKelvinCelsius, converterkmMilhas } = require('./tools')
 
-console.log(converterKelvinCelsius(100))
+console.log(converterkmMilhas(1))

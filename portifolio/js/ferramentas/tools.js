@@ -137,6 +137,8 @@ module.exports = {
         return `${temp}°K é ${temp - 273.15}°C `
     },
 
-
+    converterkmMilhas(vel1) {
+        return `${vel1} km é ${vel1 / 1.609344} mi`
+    }
 
 }
