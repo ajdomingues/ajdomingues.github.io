@@ -149,4 +149,8 @@ module.exports = {
         return `${vel1} km/h é ${vel1 / 3.6} m/s`
     },
 
+    converterMskmh(vel1) {
+        return `${vel1} m/s é ${vel1 * 3.6} km/h`
+    },
+
 }

@@ -2,7 +2,7 @@ const { juntarTextos, converterParaBinario, converterParaDecimal, arredondar, ro
     somar, subtrair, multiplicar, dividir, restoDivisao, potencia, percentual, somaPercentual, subtrairPercentual,
     tabuada, somaTodosAte, areaCirculo, ordem_0, ordem_1, geradorLetras, geradorTresNumeros,
     contarDias, calcularAprovacao, converterCelsiusFarenheit, converterFarenheitCelsius, converterCelsiusKelvin,
-    converterKelvinCelsius, converterkmMilhas, converterMilhasKm, converterKmhMs } = require('./tools')
+    converterKelvinCelsius, converterkmMilhas, converterMilhasKm, converterKmhMs, converterMskmh } = require('./tools')
 
- console.log(converterKmhMs(1))
+ console.log(converterMskmh(1))
 

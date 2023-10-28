@@ -248,4 +248,14 @@ const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
 `${vel1} Mi é ${vel1 * 1.609344} km`
 ```
 
-
+#### Quilômetros por hora em metros por segundo
+- A fórmula é ms = kmh / 3.6
+```js
+`${vel1} km/h é ${vel1 / 3.6} m/s`
+```
+    
+#### Metros por segundo em quilômetros por hora
+- A fórmula é kmh = ms * 3.6
+```js
+`${vel1} m/s é ${vel1 * 3.6} km/h`
+```
