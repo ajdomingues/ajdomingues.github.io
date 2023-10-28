@@ -234,7 +234,7 @@ const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
  `${temp}°C é ${temp + 273.15}°K `
 ```
 
-### Distâncias
+### Comprimento
 #### Quilômetros em milhas
 - A fórmula é mi = km/1.609344
 
@@ -248,6 +248,20 @@ const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
 `${vel1} Mi é ${vel1 * 1.609344} km`
 ```
 
+#### Centímetros em polegada
+- A fórmula é pol = cm/2.54
+```js
+`${medida1}cm é ${medida1 / 2.54}pol`
+```
+
+#### Polegada em centímetro
+- A fórmula é cm = pol*2.54
+```js
+`${medida1}pol é ${medida1 * 2.54}cm`
+```
+
+### Velocidade
+
 #### Quilômetros por hora em metros por segundo
 - A fórmula é ms = kmh / 3.6
 ```js
@@ -259,3 +273,5 @@ const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
 ```js
 `${vel1} m/s é ${vel1 * 3.6} km/h`
 ```
+
+

@@ -153,4 +153,12 @@ module.exports = {
         return `${vel1} m/s é ${vel1 * 3.6} km/h`
     },
 
+    conversorCmPol(medida1) {
+        return `${medida1}cm é ${medida1 / 2.54}pol`
+    },
+
+    conversorPolCm(medida1) {
+        return `${medida1}pol é ${medida1 * 2.54}cm`
+    },
+
 }
