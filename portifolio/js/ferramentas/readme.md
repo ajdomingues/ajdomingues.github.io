@@ -248,16 +248,30 @@ const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
 `${vel1} Mi é ${vel1 * 1.609344} km`
 ```
 
-#### Centímetros em polegada
+#### Centímetros em polegadas
 - A fórmula é pol = cm/2.54
 ```js
 `${medida1}cm é ${medida1 / 2.54}pol`
 ```
 
-#### Polegada em centímetro
+#### Polegadas em centímetros
 - A fórmula é cm = pol*2.54
 ```js
 `${medida1}pol é ${medida1 * 2.54}cm`
+```
+
+#### Nanômetros em centímetros
+- A fórmula é cm = nm / 10000000
+
+```js
+`${medida1}nm é ${medida1 / 10000000}cm`
+```
+   
+#### Centímetros em nanômetros
+- A fórmula é cm = nm * 10000000
+
+```js
+`${medida1}cm é ${medida1 * 10000000}nm`
 ```
 
 ### Velocidade

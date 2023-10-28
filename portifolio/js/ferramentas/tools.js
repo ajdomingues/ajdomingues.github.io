@@ -161,4 +161,12 @@ module.exports = {
         return `${medida1}pol é ${medida1 * 2.54}cm`
     },
 
+    conversorNmCm(medida1) {
+        return `${medida1}nm é ${medida1 / 10000000}cm`
+    },
+
+    conversorCmNm(medida1) {
+        return `${medida1}cm é ${medida1 * 10000000}nm`
+    },
+
 }
