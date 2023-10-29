@@ -169,4 +169,12 @@ module.exports = {
         return `${medida1}cm é ${medida1 * 10000000}nm`
     },
 
+    conversorJdM(medida1) {
+        return `${medida1}yd é ${medida1 * 0.9144}m`
+    },
+
+    conversorMjd(medida1) {
+        return `${medida1}m é ${medida1 / 0.9144}yd`
+    },
+
 }

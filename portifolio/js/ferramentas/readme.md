@@ -274,6 +274,19 @@ const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
 `${medida1}cm é ${medida1 * 10000000}nm`
 ```
 
+#### Jardas em metros
+- A fórmula é m = yd * 0.9144
+
+```js
+`${medida1}yd é ${medida1 * 0.9144}m`
+```
+
+#### Metros em jardas
+- A fórmula é yd = m / 0.9144
+```js
+`${medida1}m é ${medida1 / 0.9144}yd`
+```
+
 ### Velocidade
 
 #### Quilômetros por hora em metros por segundo
