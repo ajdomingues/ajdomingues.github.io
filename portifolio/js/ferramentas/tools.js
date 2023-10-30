@@ -169,6 +169,14 @@ module.exports = {
         return `${medida1}cm é ${medida1 * 10000000}nm`
     },
 
+    conversorMicromCm(medida1) {
+        return `${medida1}µm é ${medida1 / 10000}cm`
+    },
+
+    conversorCmMicrom(medida1) {
+        return `${medida1}cm é ${medida1 * 10000}µm`
+    },
+
     conversorJdM(medida1) {
         return `${medida1}yd é ${medida1 * 0.9144}m`
     },
@@ -176,5 +184,7 @@ module.exports = {
     conversorMjd(medida1) {
         return `${medida1}m é ${medida1 / 0.9144}yd`
     },
+
+
 
 }
