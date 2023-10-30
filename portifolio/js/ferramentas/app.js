@@ -3,7 +3,8 @@ const { juntarTextos, converterParaBinario, converterParaDecimal, arredondar, ro
     tabuada, somaTodosAte, areaCirculo, ordem_0, ordem_1, geradorLetras, geradorTresNumeros,
     contarDias, calcularAprovacao, converterCelsiusFarenheit, converterFarenheitCelsius, converterCelsiusKelvin,
     converterKelvinCelsius, converterkmMilhas, converterMilhasKm, converterKmhMs, converterMskmh,
-conversorCmPol, conversorPolCm, conversorCmNm, conversorNmCm, conversorJdM, conversorMjd, conversorCmMicrom, conversorMicromCm } = require('./tools')
+conversorCmPol, conversorPolCm, conversorCmNm, conversorNmCm, conversorJdM, conversorMjd, conversorCmMicrom, 
+conversorMicromCm, conversorHmin, conversorMinH} = require('./tools')
 
- console.log(conversorMicromCm(10000))
+ console.log(conversorMinH(60))
 

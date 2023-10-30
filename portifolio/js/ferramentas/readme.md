@@ -313,4 +313,16 @@ const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
 `${vel1} m/s é ${vel1 * 3.6} km/h`
 ```
 
+### Tempo
+#### Horas em minutos
+- A fórmula é min = h * 60
+```js
+`${tempo1}h é ${tempo1 * 60}min`
+```
+
+#### Minutos em horas
+- A fórmula é h = min / 60
+```js
+`${tempo1}min é ${tempo1 / 60}h`
+```
 

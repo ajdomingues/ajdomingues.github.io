@@ -185,6 +185,14 @@ module.exports = {
         return `${medida1}m é ${medida1 / 0.9144}yd`
     },
 
+    conversorHmin(tempo1) {
+        return `${tempo1}h é ${tempo1 * 60}min`
+    },
+
+    conversorMinH(tempo1) {
+        return `${tempo1}min é ${tempo1 / 60}h`
+    },
+
 
 
 }
