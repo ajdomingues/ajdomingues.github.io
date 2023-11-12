@@ -41,7 +41,7 @@ Arredondar número usando o toFixed(2)
 return num1.toFixed(2)
 ```
 
-## Converter números romandos
+## Converter números romanos para decimais
 Converter número de romanos para arábicos
 
 É recebido um número em romanos por parâmetor. Criamos uma variável chamada "n" e a inicilizamos com 0.
@@ -77,6 +77,38 @@ for (let i = 0; i < romano.length; i++) {
 Por último retornamos o valor de n
 ```js
 return n;
+```
+
+## Converter números decimais para romanos
+Converter número de romanos para arábicos
+- O número decimal é passado por parâmetro.
+- Adicionamos numa constante todos os números romanos possíveis:
+```js
+ const numerosRomanos = [
+            { value: 1000, symbol: 'M' },
+            { value: 900, symbol: 'CM' },
+            { value: 500, symbol: 'D' },
+            { value: 400, symbol: 'CD' },
+            { value: 100, symbol: 'C' },
+            { value: 90, symbol: 'XC' },
+            { value: 50, symbol: 'L' },
+            { value: 40, symbol: 'XL' },
+            { value: 10, symbol: 'X' },
+            { value: 9, symbol: 'IX' },
+            { value: 5, symbol: 'V' },
+            { value: 4, symbol: 'IV' },
+            { value: 1, symbol: 'I' }
+        ];
+```
+- Depois, criamos um laço de repetição que vai armazenar na variável resultado os números deciomais conforme ele for identificando:
+```js
+ for (const numeral of numerosRomanos) {
+            while (numeroRestante >= numeral.value) {
+                resultado += numeral.symbol;
+                numeroRestante -= numeral.value;
+            }
+        }
+        return resultado;
 ```
 
 ## Gerando números aleatórios
