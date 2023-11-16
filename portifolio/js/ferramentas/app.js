@@ -5,6 +5,7 @@ const { juntarTextos, converterParaBinario, converterParaDecimal, arredondar, ro
     converterKelvinCelsius, converterkmMilhas, converterMilhasKm, converterKmhMs, converterMskmh,
 conversorCmPol, conversorPolCm, conversorCmNm, conversorNmCm, conversorJdM, conversorMjd, conversorCmMicrom, 
 conversorMicromCm, conversorHmin, conversorMinH} = require('./tools')
+const {dolarReal} =require('./conversorMoedas')
 
- console.log(intToRoman(39))
+ console.log(dolarReal(5))
 
