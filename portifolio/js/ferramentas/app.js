@@ -3,9 +3,9 @@ const { juntarTextos, converterParaBinario, converterParaDecimal, arredondar, ro
     tabuada, somaTodosAte, areaCirculo, ordem_0, ordem_1, geradorLetras, geradorTresNumeros,
     contarDias, calcularAprovacao, converterCelsiusFarenheit, converterFarenheitCelsius, converterCelsiusKelvin,
     converterKelvinCelsius, converterkmMilhas, converterMilhasKm, converterKmhMs, converterMskmh,
-conversorCmPol, conversorPolCm, conversorCmNm, conversorNmCm, conversorJdM, conversorMjd, conversorCmMicrom, 
-conversorMicromCm, conversorHmin, conversorMinH} = require('./tools')
-const {dolarReal} =require('./conversorMoedas')
+    conversorCmPol, conversorPolCm, conversorCmNm, conversorNmCm, conversorJdM, conversorMjd, conversorCmMicrom,
+    conversorMicromCm, conversorHmin, conversorMinH } = require('./tools')
+const { dolarReal } = require('./conversorMoedas')
 
- console.log(dolarReal(5))
+console.log(dolarReal(1))
 
