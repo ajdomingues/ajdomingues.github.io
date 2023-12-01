@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio de e-mails</title>
+</head>
+
+<body>
+    <form target="_blank" action="https://formsubmit.co/{email do administrador/destinatario}" method="POST">
+        <input placeholder="Seu nome" name="name" required />
+        <input placeholder="Seu e-mail" name="email" type="email" required />
+        <textarea placeholder="Sua mensagem" name="message" cols="30" rows="10" required></textarea>
+        <input type="hidden" name="_next" value="portifolio/js/envioEmail/thankyou.html">
+        <input type="submit" />
+    </form>
+</body>
+
+</html>
