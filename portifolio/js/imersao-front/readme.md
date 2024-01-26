@@ -109,3 +109,76 @@ Criei o hábito de, ao colocar uma classe numa tag no html, já inseri-la no css
 </aside>
 
 Como a fonte é sempre a mesma, no css, adicionei a fonte dentro da tag `body`. Assim, dispensa a necessidade de repetir em toda as seções/classes que tem texto.
+
+## Aula 3
+- Organização da estrutura do projeto visando a manutenção.
+    - Criado a pasta `src` e movido pra dentro dela a pasta `assets`. Na sequência, dentro de `src` foi criado a pasta `styles` e foi movido pra dentro dela os arquivos `style.css` e `reset.css`.
+    - Renomeado o arquivo `style.css`  para `sidebar-footer.css`.
+    - Ajustei o caminho dos links para `sidebar-footer.css` e `reset.css` adicionando um `./src/styles` no começo da url:
+    
+    ```html
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/sidebar-footer.css">
+    ```
+    
+    - Depois, ajustei o caminho da favicon e do logo do Spotify colocando um `./src` no começo da url:
+    
+    ```html
+    <link rel="shortcut icon" href="./src/assets/icons/favicon.png" type="image/x-icon">
+    ```
+    
+    ```html
+    <img src="./src/assets/icons/logo-spotify.png" alt="Logo do Spotify">
+    ```
+    
+
+- Utilização de variáveis no css:
+    - Foi criado o arquivo `vars.css` dentro da pasta `styles`. Nele serão utilizadas as variáveis de estilos que se repetem ao longo do código. Movi para ele a `root` que eu já tinha feito por conta própria na aula 1.
+    - Adicionado a chamada do `vars.css` no head do `index.html`:
+    
+    ```html
+    <link rel="stylesheet" href="./src/styles/vars.css">
+    ```
+    
+- Criado os botões para navegar, caixa de pesquisa, botão para login e o inscreva-se. Foi criado a seção `main`. Para estilizar a `main` foi criado também o `main-content.css`. Adicionado a chamada dele no head do `index.html`:
+
+```html
+<link rel="stylesheet" href="./src/styles/main-content.css">
+```
+
+- Nas variáveis de css, alterei o nome de algumas cores que já tinha escolhido a fim de evitar conflitos com as variáveis escolhidas no projeto da aula.
+
+## Aula 4
+- Incluso no `main-content.css` os atributos para os cards.
+- Criado o arquivo `media-queries.css` dentro da pasta `src/styles`. Essa folha de estilos vai fazer com que a página se adapte para diferentes tamanhos de telas.
+- Adicionado a chamada para `media-queries.css` no head do arquivo `index.html`.
+
+```html
+<link rel="stylesheet" href="./src/styles/media-queries.css" />
+```
+
+- Utilizado o json server parar criar uma “api fake” a fim de validar alguns processos do frontend sem ter o backend.
+- Para instalar, foi aberto o terminal na pasta do projeto e executado o seguinte comando²:
+
+```powershell
+npm i json-server -g
+```
+
+² É necessário ter instalado o node para executar o comando.
+
+Após o processo acima, foi criado o arquivo `artists.json` dentro da pasta `api-artists`. Vamos utilizar o `artists.json` para emular a nossa api. Foi disponibilizado todo o conteúdo desse arquivo.
+
+Comando para fazer com que o json-server fique “escutando o arquivo”:
+
+```powershell
+json-server --watch api-artists/artists.json --port 3000
+```
+
+- Seguindo as orientações da aula, alterei a posição da declaração do arquivo `app.js`  para antes de fechar o `body` no `index.html`. Isso serve para atrasar o carregamento do JavaScript e ganha-se performance.
+
+```html
+<script type="text/javascript" src="./app.js"></script>
+</body>
+```
+
+- Foi implementado o `app.js`  com a função de busca. Na constante url foi adicionado o caminho da “api fake”.
