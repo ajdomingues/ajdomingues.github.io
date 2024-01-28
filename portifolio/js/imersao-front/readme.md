@@ -182,3 +182,25 @@ json-server --watch api-artists/artists.json --port 3000
 ```
 
 - Foi implementado o `app.js`  com a função de busca. Na constante url foi adicionado o caminho da “api fake”.
+
+Verifiquei que não estava executando a pesquisa corretamente. Algumas pessoas no fórum da imersão no Discord estavam tendo o mesmo problema. Verifiquei o passo a passo e consegui executar.  Trata-se de um problema com a versão do json-server.
+
+Primeiro, deve-se desinstalar a versão instalada do json-server. Abra o terminal e digite:
+
+```powershell
+npm uninstall json-server
+```
+
+Depois, reinstale indiciando a versão específica 0.17.4 assim:
+
+```powershell
+npm install -g json-server@0.17.4
+```
+
+Pronto, agora é só executa novamente o json-server e o projeto e a pesquisa fica ok.
+
+Para conferir a versão do json-server pode-se executar esse comando:
+
+```powershell
+json-server --version
+```
