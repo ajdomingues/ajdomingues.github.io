@@ -1,4 +1,4 @@
-Esse faz parte de uma série de 7 jogos.
+Exercício feito com base no vídeo: [link](https://www.youtube.com/watch?v=ec8vSKJuZTk&t=5727s&ab_channel=freeCodeCamp.org)
 # Jogo da memória
 O jogo consiste em encontrar os pares das figuras mediante os cartões. 6 imagens foram escolhidas para o jogo: 🍔🍟🌭🍦🥤🍕.
 

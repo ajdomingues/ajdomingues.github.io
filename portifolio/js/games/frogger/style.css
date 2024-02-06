@@ -1,0 +1,59 @@
+/* TODO: melhorar fontes. */
+.grid {
+    border: 1px solid black;
+    height: 180px;
+    width: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(74, 135, 74);
+}
+
+.grid div {
+    height: 20px;
+    width: 20px;
+}
+
+.ending-block {
+    background-color: red;
+}
+
+.starting-block {
+    background-color: blue;
+}
+
+.l1::before {
+    content: '🪵';
+}
+
+.l2::before {
+    content: '🪵';
+}
+
+.l3::before {
+    content: '🪵';
+}
+
+.l1, .l2, .l3 {
+    background-color: lightblue;
+}
+
+
+.l4, .l5 {
+    background-color: lightblue;
+}
+
+.c1{
+    background-color: lightgrey;
+}
+
+.c1::before {
+    content: '🚙';
+}
+
+.c2, .c3 {
+    background-color: lightgrey;
+}
+
+.frog::before {
+    content: '🐸';
+}
