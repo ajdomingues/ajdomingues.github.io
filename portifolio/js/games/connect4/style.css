@@ -1,4 +1,9 @@
-/* TODO: melhorar fonte */
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+* {
+    font-family: 'Roboto', 'sans-serif';
+}
+
 .grid {
     border: 1px solid;
     height: 120px;
@@ -12,10 +17,10 @@
     width: 20px;
 }
 
-.player-one::before{
-    content:'🔴' ;
+.player-one::before {
+    content: '🔴';
 }
 
-.player-two::before{
+.player-two::before {
     content: '🔵';
 }

@@ -1,3 +1,10 @@
+/* TODO: melhorar fonte */
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+* {
+    font-family: 'Roboto', 'sans-serif';
+}
+
 .grid {
     position: absolute;
     width: 560px;
@@ -21,10 +28,11 @@
 }
 
 .ball {
-     position: absolute;
+    position: absolute;
     width: 20px;
-    height: 20px;    
+    height: 20px;
 }
+
 .ball::before {
-    content: "⚽";    
+    content: "⚽";
 }
