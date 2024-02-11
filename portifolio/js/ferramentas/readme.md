@@ -244,6 +244,18 @@ const resultado = nota => nota >= notaCorte ? 'Aprovado' : 'Reprovado'
 
 ## Conversores
 
+### Moedas
+
+* A função recebe o valor do dólar pra converter através de parâmetro.
+* Coletei a data atual na cont `hoje` e usamos a função `new Date`.
+* Para utilizarmos a API do BCB, precisamos de um formato específico da data:'(mês + 1)-dia-ano'. Criei a variável `formatarData` e aproveitei a `hoje` para pegar esses dados.
+* Na `url` guardei a url da API gratuita do BCB e dentro dela passamos o nosso formato de data com a data atual usando `${ }` e crases/backticks. Incluímos na URL que desejamos que o retorno seja no formato `json`.
+* Invocamos a função `fetch` e passamos a `url` como parâmetro.
+    * Extraí da resposta as informações que precisamos.
+    * Na const `valorReal` fazemos a conta do valor da cotação x  valor do dolar.
+    * Formatei para deixar com 2 casas após a vírgula usando `toFixed` e template string para formatar a resposta.
+
+
 ### Temperatura
 
 #### Converter graus Celsius em Farenheit
