@@ -512,3 +512,146 @@ $$
 ```jsx
 `${tempo1}min é ${tempo1 / 60}h`
 ```
+
+### Analisador de palíndromo
+
+Palíndromo, segundo o dicionário Houaiss, “diz-se de ou frase ou palavra que se pode ler, indiferentemente, da esquerda para direita ou vice-versa”: osso, Ana, radar, Renner, Roma é amor, orava o avaro, socorram-me subi no ônibus em Marrocos…
+
+Fonte: [Link](https://www.notion.so/Void-765ee20d18d9451ea62b68d2ca45b67d?pvs=21).
+
+Exemplo de palíndromos: Ana, Ada, Oto, Renner, aia, ala, arara.
+
+Também pode pode ser usado em frases:
+
+A base do teto desaba.
+
+A cara rajada da jararaca
+
+Acuda cadela da Leda caduca
+
+A dama admirou o rim da amada
+
+Aí Lima falou Olá família
+
+Adias a data da saída.
+
+A diva em Argel alegra me a vida
+
+A droga do dote é todo da gorda
+
+A gorda ama a droga
+
+A grama é amarga
+
+Ajudem Edu já
+
+A lupa pula
+
+A mãe te ama
+
+A mala nada na lama
+
+Ame o poema
+
+A miss é péssima
+
+Amo Omã Se Roma me tem amores, amo Omã
+
+Anotaram a data da maratona
+
+A pateta ama até tapa
+
+Após a sopa
+
+Arara rara
+
+À Rita sátira
+
+A Rita sobre vovô verbos atira
+
+A rua Laura
+
+Assim a aia ia à missa
+
+Ato idiota
+
+A torre da derrota
+
+E até o Papa poeta é
+
+Irene ri
+
+Laço bacana para panaca boçal
+
+Lá vou eu em meu eu oval
+
+Luza Rocelina a namorada do Manuel leu na moda da romana anil é cor azul
+
+Luz azul
+
+Mega bobagem
+
+Me vê se a panela da moça é de aço Madalena Paes e vem
+
+Missa é assim
+
+O céu sueco
+
+O galo ama o lago
+
+Olá galo
+
+Olé Maracujá caju caramelo
+
+O lobo ama o bolo
+
+O romano acata amores a damas amadas e Roma ataca o namoro
+
+O teu dueto
+
+Ótimo só eu, que os omito
+
+Oto come mocotó
+
+O trote torto
+
+Rir, o breve verbo rir
+
+Roma é amor
+
+Roma me tem amor
+
+Saíram o tio e oito Marias
+
+Seco de raiva, coloco no colo caviar e doces
+
+Socorram-me, subi no ônibus em Marrocos
+
+Zé de Lima, Rua Laura, mil e dez
+
+>[!Note]
+>Essa versão remove acentos, mas não remove pontos, vírgulas, hífens, e aspas.
+
+- É recebido a frase por parâmetro. Na const `fraseAnalisar` recebe a frase e já começa os processos:
+    - Todo o texto é transformado em minúsculo usanto `toLocaleLowerCase()`
+    - Todo o espaço do texto é removido usando o `replace` e uma expressão regular.
+    - Ainda com `replace` usamos o `normalize` para remover acentos com uma expressão regular também.
+
+```jsx
+const fraseAnalisar = frase.toLocaleLowerCase().replace(/\s/g, '').normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+```
+
+- Na sequência, colocamos na const `fraseExperimento` o que foi processado em `fraseAnalisar` e fazemos mais tratamentos:
+    - Separamos letra por letra e inserimos em um vetor.
+    - Invertemos o vetor.
+    - Juntamos tudo de novo com a ordem que está o vetor.
+
+```jsx
+const fraseExperimento = fraseAnalisar.split("").reverse().join("")
+```
+
+- Agora, é só comparar a `fraseAnalisar` com a `fraseExperimento` e colocar uma ação pra cada situação.
+
+```jsx
+if (fraseAnalisar === fraseExperimento) {
+```

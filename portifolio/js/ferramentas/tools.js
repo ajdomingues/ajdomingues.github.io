@@ -224,6 +224,17 @@ module.exports = {
         return `${tempo1}min é ${tempo1 / 60}h`
     },
 
-
+    analisarPalindromo(frase) {
+        const fraseAnalisar = frase.toLocaleLowerCase()
+            .replace(/\s/g, '').normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+        const fraseExperimento = fraseAnalisar.split('')
+            .reverse().
+            join('')
+        if (fraseAnalisar === fraseExperimento) {
+            return `${frase} é palíndromo.`
+        } else {
+            return `${frase} não palíndromo.`
+        }
+    },
 
 }
