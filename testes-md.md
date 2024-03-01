@@ -5,7 +5,7 @@
 >Nota de dica.
 
 >[!IMPORTANT]
->Nota imporante.
+>Nota importante.
 
 >[!CAUTION]
 >Nota de atenção.
@@ -29,4 +29,23 @@
 >Nota de informação.
 
 >[!SUCCESS]
->Sucesseo
+>Sucesso
+
+!texto
+
+Para mostrar um Aviso coloque ! na frente do texto:
+
+!Esse é um texto de Aviso
+
+Para mostrar um Erro coloque !! na frente do texto:
+
+!!Esse é um texto de Erro
+
+Para mostrar uma Informação coloque !!! na frente do texto:
+
+!!!Esse é um texto de Informação
+
+Para mostrar um Sucesso coloque !!!! na frente do texto:
+
+!!!!Esse é um texto de Sucesso
+[!!!!Esse é um texto de Sucesso]
