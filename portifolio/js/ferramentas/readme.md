@@ -2,8 +2,8 @@
 
 Várias ferramentas para ser reutilizadas em diversas aplicações. A ideia é ser o mais simples possível para funções rotineiras.
 
-## Transformar texto em maiúsculo
 
+## Transformar texto em maiúsculo
 Pegar um texto e retorná-lo chamando a função toUpperCase
 
 ```jsx
@@ -181,9 +181,12 @@ Recebido o número e o seu expoente. Utilizamos a função `Math.pow` e passamos
 ```jsx
 return Math.pow(num1, exp);
 ```
+Também poderia ser assim:
+```jsx
+return (num1 ** exp);
+```
 
 ## Percentual
-
 - É recebido por parâmetro o número e o percentual desejado.
 - Multiplica-se o número pelo percentual.
 - O resultado da multiplicação é dividido por 100.
@@ -629,8 +632,8 @@ Socorram-me, subi no ônibus em Marrocos
 
 Zé de Lima, Rua Laura, mil e dez
 
->[!Note]
->Essa versão remove acentos, mas não remove pontos, vírgulas, hífens, e aspas.
+> [!NOTE]
+> Essa versão remove acentos, mas não remove pontos, vírgulas, hífens, e aspas.
 
 - É recebido a frase por parâmetro. Na const `fraseAnalisar` recebe a frase e já começa os processos:
     - Todo o texto é transformado em minúsculo usanto `toLocaleLowerCase()`
@@ -653,5 +656,5 @@ const fraseExperimento = fraseAnalisar.split("").reverse().join("")
 - Agora, é só comparar a `fraseAnalisar` com a `fraseExperimento` e colocar uma ação pra cada situação.
 
 ```jsx
-if (fraseAnalisar === fraseExperimento) {
+if (fraseAnalisar === fraseExperimento) {}
 ```
