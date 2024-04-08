@@ -152,36 +152,36 @@ module.exports = {
         return resultado(nota)
     },
 
-    converterCelsiusFarenheit(temp) {
-        return `${temp}°C é ${(temp * 1.8) + 32}°F `
+    converterCelsiusFarenheit(temperatura) {
+        return `${temperatura}°C é ${(temperatura * 1.8) + 32}°F `
     },
 
-    converterFarenheitCelsius(temp) {
-        return `${temp}°F é ${(temp - 32) / 1.8}°C `
+    converterFarenheitCelsius(temperatura) {
+        return `${temperatura}°F é ${(temperatura - 32) / 1.8}°C `
     },
 
-    converterCelsiusKelvin(temp) {
-        return `${temp}°C é ${temp + 273.15}°K `
+    converterCelsiusKelvin(temperatura) {
+        return `${temperatura}°C é ${temperatura + 273.15}°K `
     },
 
-    converterKelvinCelsius(temp) {
-        return `${temp}°K é ${temp - 273.15}°C `
+    converterKelvinCelsius(temperatura) {
+        return `${temperatura}°K é ${temperatura - 273.15}°C `
     },
 
-    converterkmMilhas(vel1) {
-        return `${vel1} km é ${vel1 / 1.609344} mi`
+    converterkmMilhas(velocidade1) {
+        return `${velocidade1} km é ${velocidade1 / 1.609344} mi`
     },
 
-    converterMilhasKm(vel1) {
-        return `${vel1} Mi é ${vel1 * 1.609344} km`
+    converterMilhasKm(velocidade1) {
+        return `${velocidade1} Mi é ${velocidade1 * 1.609344} km`
     },
 
-    converterKmhMs(vel1) {
-        return `${vel1} km/h é ${vel1 / 3.6} m/s`
+    converterKmhMs(velocidade1) {
+        return `${velocidade1} km/h é ${velocidade1 / 3.6} m/s`
     },
 
-    converterMskmh(vel1) {
-        return `${vel1} m/s é ${vel1 * 3.6} km/h`
+    converterMskmh(velocidade1) {
+        return `${velocidade1} m/s é ${velocidade1 * 3.6} km/h`
     },
 
     conversorCmPol(medida1) {
