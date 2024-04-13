@@ -517,7 +517,6 @@ $$
 ```
 
 ### Analisador de palíndromo
-
 Palíndromo, segundo o dicionário Houaiss, “diz-se de ou frase ou palavra que se pode ler, indiferentemente, da esquerda para direita ou vice-versa”: osso, Ana, radar, Renner, Roma é amor, orava o avaro, socorram-me subi no ônibus em Marrocos…
 
 Fonte: [Link](https://www.notion.so/Void-765ee20d18d9451ea62b68d2ca45b67d?pvs=21).
@@ -658,3 +657,19 @@ const fraseExperimento = fraseAnalisar.split("").reverse().join("")
 ```jsx
 if (fraseAnalisar === fraseExperimento) {}
 ```
+### Verificador de números primos v1
+A função analisa e exibe todos os números primos de 1 até o número `limite` informado por parâmetro.
+
+**Regra pra ser um número primo:** o número só pode ser divisível por 1 e por ele mesmo.
+- Utilizei dois laços `for` um dentro do outro.
+    - No 1º, uso a variável `numero` como contador e inicializado com 3. Esse laço vai se repetir até que `numero` seja <= a `limite`. A cada iteração `numero` ganha +1.
+        - A variável `ehPrimo` será o controle se é ou não primo. Ela é inicializada com true.
+    - No 2º `for` uso como contador a variável `divisor` que inicia com 2. O laço vaio se repetir enquanto `divisor` é menor que `numero`. A cada iteração `divisor` ganha +1.
+        - É utilizado o if pra validar os números usando o resto da divisão. Se em algum dos testes o resto da divisão é 0, significa que não é primo e já interrompe o processo. Ou seja, não precisa continuar a análise. Fazendo com que saia e volte ao laço anterior para pegar o próximo número da sequência, se existir.
+```jsx
+if (numero % divisor === 0) {
+    ehPrimo = false;
+    break;
+}   
+```
+- Por último é exibido o número da vez.

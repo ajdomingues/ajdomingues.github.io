@@ -8,4 +8,3 @@ const { juntarTextos, converterParaBinario, converterParaDecimal, arredondar, ro
 const { dolarReal } = require('./conversorMoedas')
 
 verificarNumerosPrimos(15)
-
