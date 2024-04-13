@@ -4,8 +4,8 @@ const { juntarTextos, converterParaBinario, converterParaDecimal, arredondar, ro
     contarDias, calcularAprovacao, converterCelsiusFarenheit, converterFarenheitCelsius, converterCelsiusKelvin,
     converterKelvinCelsius, converterkmMilhas, converterMilhasKm, converterKmhMs, converterMskmh,
     conversorCmPol, conversorPolCm, conversorCmNm, conversorNmCm, conversorJdM, conversorMjd, conversorCmMicrom,
-    conversorMicromCm, conversorHmin, conversorMinH, analisarPalindromo } = require('./tools')
+    conversorMicromCm, conversorHmin, conversorMinH, analisarPalindromo, verificarNumerosPrimos } = require('./tools')
 const { dolarReal } = require('./conversorMoedas')
 
-console.log(analisarPalindromo('Laço bacana para panaca boçal'))
+verificarNumerosPrimos(15)
 

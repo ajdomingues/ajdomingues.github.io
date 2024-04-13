@@ -236,5 +236,17 @@ module.exports = {
             return `${frase} não palíndromo.`
         }
     },
+    verificarNumerosPrimos(limite) {
+        for (let numero = 3; numero <= limite; numero++) {
+            let ehPrimo = true;
+            for (let divisor = 2; divisor < numero; divisor++) {
+                if (numero % divisor === 0) {
+                    ehPrimo = false;
+                    break;
+                }
+            }
+            if (ehPrimo) console.log(numero)
+        }
+    },
 
 }
