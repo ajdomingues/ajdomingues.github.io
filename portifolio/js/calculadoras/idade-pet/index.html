@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./img/pet.svg" type="image/x-icon">
     <title>Idade de Pet</title>
 </head>
@@ -13,27 +13,28 @@
     <main>
         <div class="container">
             <div class="title">Cálculo de idade de pet</div>
-            <div class="input">
-                <label>Selecione o pet</label>
-                <select id="tipoPet" name="tipoPet">
+            <div class="input">                
+                <select id="tipo-pet" name="tipo-pet" required="required" onchange="alternarSelectPeso()">                    
+                    <option value="">--Selecione o pet--</option>
                     <option value="cao">Cão</option>
                     <option value="gato">Gato</option>
                 </select>
-                <input type="number" name="idadeP" text="Informa a idade do pet" id="idadeP" required="required">
-                <span>Informe a idade do pet</span>
-                <label>Selecione o peso do pet</label>
-                <select id="pesoPet" name="pesoPet">
-                    <option value=""><=9,04kg</option>
-                    <option value="">Entre 9,52kg e 22,7kg</option>
-                    <option value="">Entre 23,1kg e 40,8kg</option>
-                    <option value="">Maior que 40,8kg</option>
+                <input type="number" name="idadeP" text="Informa a idade do pet" id="idadeP" required="required">                
+                <span>Informe a idade do pet</span>                
+                <select id="peso-pet" name="peso-pet" disbaled>
+                    <option value="">--Selecione o peso do pet--</option>
+                    <option value="0">Menor ou igual a 9,04kg</option>
+                    <option value="1">Entre 9,52kg e 22,70kg</option>
+                    <option value="2">Entre 23,10kg e 40,80kg</option>
+                    <option value="3">Maior que 40,80kg</option>
                 </select>
-
             </div>
 
             <button id="calculate">Calcular</button>
             <div class="result" id="result"></div>
         </div>
+        <br>        
+        <br>        
     </main>
     <p class="info">Fonte da tabela: AAFP- AAHA/Dog Owner's Home Veterinary Handbook - Zoetis US</p>
     <script src="app.js"></script>
